@@ -1,2 +1,1 @@
-# gatsby-theme-axii
-A Gatsby blog theme.
+# AXII - A Gatsby blog theme.
