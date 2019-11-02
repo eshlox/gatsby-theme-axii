@@ -1,0 +1,16 @@
+{
+  "name": "@eshlox/gatsby-theme-axii",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "develop": "gatsby develop"
+  },
+  "dependencies": {
+    "gatsby": "^2.17.7",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
+}

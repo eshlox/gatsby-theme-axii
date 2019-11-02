@@ -1,0 +1,10 @@
+{
+  "packages": ["packages/*"],
+  "version": "independent",
+  "stream": true,
+  "command": {
+    "bootstrap": {
+      "hoist": true
+    }
+  }
+}
