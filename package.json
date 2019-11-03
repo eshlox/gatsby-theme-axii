@@ -8,9 +8,11 @@
     "husky": "^3.0.9",
     "lerna": "^3.18.3"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
