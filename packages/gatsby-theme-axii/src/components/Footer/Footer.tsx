@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
             <IconButton icon={FaLinkedin} aria-label="Linkedin" mr={2} />
           </a>
         ) : null}
-        <a href="rss.xml">
+        <a href="/rss.xml">
           <IconButton icon={FaRss} aria-label="RSS" mr={2} />
         </a>
       </Stack>
