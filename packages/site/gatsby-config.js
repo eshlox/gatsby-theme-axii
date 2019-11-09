@@ -36,7 +36,7 @@ const siteMetadata = {
     algolia: {
       posts: {
         applicationId: process.env.ALGOLIA_APPLICATION_ID,
-        apiKey: process.env.ALGOLIA_API_KEY
+        apiKey: process.env.ALGOLIA_SEARCH_API_KEY
       }
     }
   }
