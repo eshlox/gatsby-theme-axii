@@ -7,6 +7,7 @@ export const blockquote: React.FunctionComponent = props => {
 
   return (
     <Callout
+      as="blockquote"
       variant="left-accent"
       status="info"
       bg={bgColor[colorMode]}
