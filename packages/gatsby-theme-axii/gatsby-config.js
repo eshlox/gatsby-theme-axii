@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `axii-a-gatsby-theme`
+        shortname: process.env.DISQUS_SHORTNAME
       }
     },
     `gatsby-image`,
