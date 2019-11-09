@@ -6,6 +6,19 @@ module.exports = {
     `gatsby-plugin-twitter`,
     `gatsby-plugin-typescript`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `AXII - A Gatsby blog theme`,
+        short_name: `AXII`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#000000`,
+        display: `standalone`,
+        icon: `src/images/icon.png`
+      }
+    },
+    `gatsby-plugin-offline`,
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `content/posts`,
