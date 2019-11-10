@@ -1,10 +1,10 @@
 const siteMetadata = {
   siteUrl: `https://gatsby-theme-axii.netlify.com`,
-  siteTitle: `AXII - A Gatsby theme`,
+  siteTitle: `Homepage`,
   siteDescription: `Very simple blog theme.`,
   author: {
     nickname: `eshlox`,
-    name: `Przemysław Kołodziejczyk`,
+    name: `AXII - A Gatsby theme`,
     email: `eshlox@vertolabs.com`
   },
   social: {
