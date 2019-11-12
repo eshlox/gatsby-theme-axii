@@ -5,7 +5,7 @@ export default interface SearchSettingsProps {
         algolia: {
           posts: {
             applicationId: string;
-            apiKey: string;
+            searchApiKey: string;
           };
         };
       };

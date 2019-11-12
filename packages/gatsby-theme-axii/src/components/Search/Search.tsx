@@ -28,7 +28,7 @@ const query = graphql`
           algolia {
             posts {
               applicationId
-              apiKey
+              searchApiKey
             }
           }
         }
@@ -44,7 +44,7 @@ const Search = () => {
       siteMetadata: {
         search: {
           algolia: {
-            posts: { applicationId, apiKey }
+            posts: { applicationId, searchApiKey }
           }
         }
       }
@@ -54,7 +54,7 @@ const Search = () => {
 
   const handleToggle = () => setShow(!show);
 
-  const searchClient = algoliasearch(applicationId, apiKey);
+  const searchClient = algoliasearch(applicationId, searchApiKey);
 
   return (
     <InstantSearch searchClient={searchClient} indexName="Posts">

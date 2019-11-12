@@ -1,70 +1,74 @@
 const path = require("path");
 const queries = require("./src/utils/algolia");
 
-module.exports = {
-  plugins: [
-    `gatsby-plugin-twitter`,
-    `gatsby-plugin-typescript`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `AXII - A Gatsby blog theme`,
-        short_name: `AXII`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#000000`,
-        display: `standalone`,
-        icon: path.resolve(__dirname, `src/images/icon.png`)
-      }
-    },
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `content/posts`,
-        name: `posts`
-      }
-    },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: path.resolve(__dirname, `src/pages`)
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`)
-      }
-    },
-    {
-      resolve: `gatsby-plugin-algolia`,
-      options: {
-        appId: process.env.ALGOLIA_APPLICATION_ID,
-        apiKey: process.env.ALGOLIA_ADMIN_API_KEY,
-        queries,
-        chunkSize: 10000 // default: 1000
-      }
-    },
-    {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: process.env.DISQUS_SHORTNAME
-      }
-    },
-    `gatsby-image`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
-    `gatsby-remark-copy-linked-files`,
-    `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-sitemap`, // TODO: sort by date?
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
+module.exports = options => {
+  const { siteMetadata } = options;
+
+  return {
+    siteMetadata,
+    plugins: [
+      `gatsby-plugin-twitter`,
+      `gatsby-plugin-typescript`,
+      {
+        resolve: `gatsby-plugin-manifest`,
+        options: {
+          name: `AXII - A Gatsby blog theme`,
+          short_name: `AXII`,
+          start_url: `/`,
+          background_color: `#ffffff`,
+          theme_color: `#000000`,
+          display: `standalone`,
+          icon: path.resolve(__dirname, `src/images/icon.png`)
+        }
+      },
+      `gatsby-plugin-offline`,
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          path: `content/posts`,
+          name: `posts`
+        }
+      },
+      {
+        resolve: `gatsby-plugin-page-creator`,
+        options: {
+          path: path.resolve(__dirname, `src/pages`)
+        }
+      },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `images`,
+          path: path.join(__dirname, `src`, `images`)
+        }
+      },
+      {
+        resolve: `gatsby-plugin-algolia`,
+        options: {
+          appId: siteMetadata.search.algolia.posts.applicationId,
+          apiKey: siteMetadata.search.algolia.posts.adminApiKey,
+          queries,
+          chunkSize: 10000 // default: 1000
+        }
+      },
+      {
+        resolve: `gatsby-plugin-disqus`,
+        options: {
+          shortname: siteMetadata.comments.disqus.shortname
+        }
+      },
+      `gatsby-image`,
+      `gatsby-plugin-react-helmet`,
+      `gatsby-transformer-sharp`,
+      `gatsby-plugin-sharp`,
+      `gatsby-transformer-remark`,
+      `gatsby-remark-copy-linked-files`,
+      `gatsby-plugin-robots-txt`,
+      `gatsby-plugin-sitemap`, // TODO: sort by date?
+      {
+        resolve: `gatsby-plugin-feed`,
+        options: {
+          query: `
           {
             site {
               siteMetadata {
@@ -76,43 +80,43 @@ module.exports = {
             }
           }
         `,
-        setup: ({
-          query: {
-            site: { siteMetadata }
-          },
-          ...rest
-        }) => {
-          siteMetadata.feed_url = siteMetadata.siteUrl + "/rss.xml";
-          siteMetadata.image_url =
-            siteMetadata.siteUrl + "/icons/icon-512x512.png";
-          const siteMetadataModified = siteMetadata;
-          siteMetadataModified.feed_url = `${siteMetadata.siteUrl}/rss.xml`;
-          siteMetadataModified.image_url = `${siteMetadata.siteUrl}/icons/icon-512x512.png`;
-
-          return {
-            ...siteMetadataModified,
-            ...rest
-          };
-        },
-        feeds: [
-          {
-            serialize: ({ query: { site, posts } }) => {
-              return posts.edges.map(edge => {
-                return {
-                  ...edge.node.frontmatter,
-                  description: edge.node.excerpt,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  categories: [
-                    ...edge.node.frontmatter.categories
-                    // ...edge.node.frontmatter.tags what if null?
-                  ]
-                  // custom_elements: [{ "content:encoded": edge.node.body }],
-                  // author: site.siteMetadata.name
-                };
-              });
+          setup: ({
+            query: {
+              site: { siteMetadata }
             },
-            query: `{
+            ...rest
+          }) => {
+            siteMetadata.feed_url = siteMetadata.siteUrl + "/rss.xml";
+            siteMetadata.image_url =
+              siteMetadata.siteUrl + "/icons/icon-512x512.png";
+            const siteMetadataModified = siteMetadata;
+            siteMetadataModified.feed_url = `${siteMetadata.siteUrl}/rss.xml`;
+            siteMetadataModified.image_url = `${siteMetadata.siteUrl}/icons/icon-512x512.png`;
+
+            return {
+              ...siteMetadataModified,
+              ...rest
+            };
+          },
+          feeds: [
+            {
+              serialize: ({ query: { site, posts } }) => {
+                return posts.edges.map(edge => {
+                  return {
+                    ...edge.node.frontmatter,
+                    description: edge.node.excerpt,
+                    url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                    guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                    categories: [
+                      ...edge.node.frontmatter.categories
+                      // ...edge.node.frontmatter.tags what if null?
+                    ]
+                    // custom_elements: [{ "content:encoded": edge.node.body }],
+                    // author: site.siteMetadata.name
+                  };
+                });
+              },
+              query: `{
               posts: allMdx(
                 filter: { fileAbsolutePath: { regex: "/posts/" } }
               ) {
@@ -134,44 +138,45 @@ module.exports = {
               }
             }
               `,
-            output: "/rss.xml"
-          }
-        ]
-      }
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          default: require.resolve(`./src/layouts/index.ts`)
-        },
-        gatsbyRemarkPlugins: [
-          { resolve: `gatsby-remark-copy-linked-files` },
-          { resolve: `gatsby-remark-autolink-headers` },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1200,
-              quality: 80,
-              linkImagesToOriginal: false,
-              withWebp: true
+              output: "/rss.xml"
             }
+          ]
+        }
+      },
+      {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+          extensions: [`.mdx`, `.md`],
+          defaultLayouts: {
+            default: require.resolve(`./src/layouts/index.ts`)
           },
-          {
-            resolve: "gatsby-remark-external-links",
-            options: {
-              target: "_blank",
-              rel: "noreferrer"
+          gatsbyRemarkPlugins: [
+            { resolve: `gatsby-remark-copy-linked-files` },
+            { resolve: `gatsby-remark-autolink-headers` },
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 1200,
+                quality: 80,
+                linkImagesToOriginal: false,
+                withWebp: true
+              }
+            },
+            {
+              resolve: "gatsby-remark-external-links",
+              options: {
+                target: "_blank",
+                rel: "noreferrer"
+              }
             }
-          }
-        ],
-        plugins: [
-          `gatsby-remark-images`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-autolink-headers`
-        ]
+          ],
+          plugins: [
+            `gatsby-remark-images`,
+            `gatsby-remark-copy-linked-files`,
+            `gatsby-remark-autolink-headers`
+          ]
+        }
       }
-    }
-  ]
+    ]
+  };
 };
