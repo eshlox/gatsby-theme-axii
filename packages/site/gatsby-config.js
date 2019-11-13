@@ -26,6 +26,10 @@ const options = {
         url: "https://telegram.me/eshlox"
       }
     },
+    manifest: {
+      name: `AXII - A Gatsby blog theme`,
+      short_name: `AXII`
+    },
     support: {
       buymeacoffee: {
         url: "https://www.buymeacoffee.com/eshlox"

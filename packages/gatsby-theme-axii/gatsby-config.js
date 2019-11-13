@@ -12,8 +12,8 @@ module.exports = options => {
       {
         resolve: `gatsby-plugin-manifest`,
         options: {
-          name: `AXII - A Gatsby blog theme`,
-          short_name: `AXII`,
+          name: siteMetadata.manifest.name,
+          short_name: siteMetadata.manifest.short_name,
           start_url: `/`,
           background_color: `#ffffff`,
           theme_color: `#000000`,
