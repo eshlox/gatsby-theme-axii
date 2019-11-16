@@ -1,11 +1,9 @@
 /** @jsx jsx */
 import { Box, Heading, Text } from "@chakra-ui/core";
 import { jsx } from "@emotion/core";
-import { MDXProvider } from "@mdx-js/react";
 import { graphql } from "gatsby";
 import { Disqus } from "gatsby-plugin-disqus";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import MDXComponents from "../components/MDXComponents";
 import Seo from "../components/SEO";
 import Support from "../components/Support";
 import Layout from "../layouts";
@@ -73,9 +71,7 @@ const PostTemplate = ({ data: { mdx, site } }: PostPageProps) => {
       </Box>
 
       <Box maxWidth="1024px" p={5} mx="auto" css={{ ...articleStyles }}>
-        <MDXProvider components={MDXComponents}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
       </Box>
 
       <Support />
