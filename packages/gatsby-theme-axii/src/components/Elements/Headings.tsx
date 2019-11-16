@@ -1,26 +1,98 @@
+/** @jsx jsx */
 import { Heading } from "@chakra-ui/core";
+import { jsx } from "@emotion/core";
 import React from "react";
 
+const headerLinkStyles = {
+  alignItems: "center",
+  display: "flex",
+  flexDirection: "row-reverse",
+  justifyContent: "flex-end",
+
+  "&:hover": {
+    a: {
+      visibility: "visible"
+    }
+  },
+
+  a: {
+    visibility: "hidden",
+
+    svg: {
+      height: "0.5em",
+      marginLeft: "0.2em"
+    }
+  }
+};
+
 export const h1: React.FC = props => {
-  return <Heading as="h1" fontSize="5xl" my="1em" {...props}></Heading>;
+  return (
+    <Heading
+      as="h1"
+      fontSize="5xl"
+      my="1em"
+      css={{ ...headerLinkStyles }}
+      {...props}
+    ></Heading>
+  );
 };
 
 export const h2: React.FC = props => {
-  return <Heading as="h2" fontSize="3xl" my="1em" {...props}></Heading>;
+  return (
+    <Heading
+      as="h2"
+      fontSize="3xl"
+      my="1em"
+      css={{ ...headerLinkStyles }}
+      {...props}
+    ></Heading>
+  );
 };
 
 export const h3: React.FC = props => {
-  return <Heading as="h3" fontSize="xl" my="1em" {...props}></Heading>;
+  return (
+    <Heading
+      as="h3"
+      fontSize="xl"
+      my="1em"
+      css={{ ...headerLinkStyles }}
+      {...props}
+    ></Heading>
+  );
 };
 
 export const h4: React.FC = props => {
-  return <Heading as="h4" fontSize="lg" my="1em" {...props}></Heading>;
+  return (
+    <Heading
+      as="h4"
+      fontSize="lg"
+      my="1em"
+      css={{ ...headerLinkStyles }}
+      {...props}
+    ></Heading>
+  );
 };
 
 export const h5: React.FC = props => {
-  return <Heading as="h5" fontSize="md" my="1em" {...props}></Heading>;
+  return (
+    <Heading
+      as="h5"
+      fontSize="md"
+      my="1em"
+      css={{ ...headerLinkStyles }}
+      {...props}
+    ></Heading>
+  );
 };
 
 export const h6: React.FC = props => {
-  return <Heading as="h6" fontSize="sm" my="1em" {...props}></Heading>;
+  return (
+    <Heading
+      as="h6"
+      fontSize="sm"
+      my="1em"
+      css={{ ...headerLinkStyles }}
+      {...props}
+    ></Heading>
+  );
 };
