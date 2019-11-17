@@ -1,8 +1,21 @@
 {
   "name": "@eshlox/gatsby-theme-axii",
-  "version": "1.0.0",
+  "version": "0.1.0",
+  "description": "AXII - A Gatsby blog theme.",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "react"
+  ],
+  "homepage": "https://github.com/eshlox/gatsby-theme-axii",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eshlox/gatsby-theme-axii.git",
+    "directory": "gatsby-theme-axii"
+  },
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
