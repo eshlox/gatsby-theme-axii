@@ -8,6 +8,9 @@
     "bootstrap": {
       "npmClientArgs": ["--no-package-lock"]
     },
+    "publishConfig": {
+      "access": "public"
+    },
     "version": {
       "allowBranch": "master",
       "conventionalCommits": true,
