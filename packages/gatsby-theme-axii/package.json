@@ -16,6 +16,9 @@
     "url": "https://github.com/eshlox/gatsby-theme-axii.git",
     "directory": "gatsby-theme-axii"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
