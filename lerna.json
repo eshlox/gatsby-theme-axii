@@ -7,6 +7,13 @@
   "command": {
     "bootstrap": {
       "npmClientArgs": ["--no-package-lock"]
+    },
+    "version": {
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "exact": true,
+      "createRelease": "github",
+      "message": "chore(release): publish %v"
     }
   }
 }
