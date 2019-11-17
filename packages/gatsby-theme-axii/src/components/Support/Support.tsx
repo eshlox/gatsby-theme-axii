@@ -2,6 +2,7 @@ import { Box, Flex, Link, useColorMode } from "@chakra-ui/core";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import React from "react";
+import { h2 as H2 } from "../Elements/Headings";
 import SupportProps from "./interfaces";
 
 const query = graphql`
@@ -38,8 +39,8 @@ const Support: React.FC = props => {
       py={24}
       bg={bgColor[colorMode]}
     >
-      <Box mb={6} fontSize="lg">
-        Do you want to support me?
+      <Box maxWidth="1024px" mx="auto">
+        <H2>Do you want to support me?</H2>
       </Box>
       <Box>
         <Link
