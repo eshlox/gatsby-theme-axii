@@ -1,5 +1,5 @@
 {
-  "packages": ["packages/*"],
+  "packages": ["@eshlox/gatsby-theme-axii"],
   "version": "independent",
   "stream": true,
   "npmClient": "yarn",
