@@ -44,6 +44,13 @@ module.exports = options => {
         }
       },
       {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `images`,
+          path: path.resolve(__dirname, `src/images`)
+        }
+      },
+      {
         resolve: `gatsby-plugin-algolia`,
         options: {
           appId: siteMetadata.search.algolia.posts.applicationId,
