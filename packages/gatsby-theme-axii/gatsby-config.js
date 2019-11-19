@@ -18,20 +18,21 @@ module.exports = options => {
           background_color: `#ffffff`,
           theme_color: `#000000`,
           display: `standalone`,
-          icon: path.resolve(__dirname, `src/images/icon.png`)
+          icon: `src/images/icon.png`
         }
       },
       `gatsby-plugin-offline`,
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          path: `content/posts`,
-          name: `posts`
+          name: `posts`,
+          path: `content/posts`
         }
       },
       {
         resolve: `gatsby-plugin-page-creator`,
         options: {
+          name: `pages`,
           path: path.resolve(__dirname, `src/pages`)
         }
       },
@@ -39,7 +40,7 @@ module.exports = options => {
         resolve: `gatsby-source-filesystem`,
         options: {
           name: `images`,
-          path: path.join(__dirname, `src`, `images`)
+          path: `src/images`
         }
       },
       {
