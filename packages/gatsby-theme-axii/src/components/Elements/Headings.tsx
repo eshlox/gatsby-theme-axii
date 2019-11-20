@@ -5,7 +5,8 @@ import React from "react";
 
 const headerLinkStyles = {
   alignItems: "center",
-  display: "flex"
+  display: "flex",
+  whiteSpace: "pre-wrap"
 };
 
 export const h1: React.FC = props => {
