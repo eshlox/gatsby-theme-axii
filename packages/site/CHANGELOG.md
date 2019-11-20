@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.1.0...site@0.1.1) (2019-11-20)
+
+
+### Bug Fixes
+
+* **shadowing:** fix for images shadowing ([10a8459](https://github.com/eshlox/gatsby-theme-axii/commit/10a84599aebe29b7b45f8901ea807e2088022a41)), closes [#16](https://github.com/eshlox/gatsby-theme-axii/issues/16)
+
+
+
+
+
 # 0.1.0 (2019-11-17)
 
 

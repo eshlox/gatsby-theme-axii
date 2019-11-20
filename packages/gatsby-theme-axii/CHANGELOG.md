@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.1.0...@eshlox/gatsby-theme-axii@0.1.1) (2019-11-20)
+
+
+### Bug Fixes
+
+* **algolia:** use correct slug field for deduplication and search ([29f3ae8](https://github.com/eshlox/gatsby-theme-axii/commit/29f3ae8f1c5f235b7618db7d36ee522b891cf782))
+* **gatsby-config:** allow to get images from theme ([e101349](https://github.com/eshlox/gatsby-theme-axii/commit/e101349129ecfc739b96880be0c4dafc37f7a3a6))
+* **heading:** fix headings styles and gatsby-remark-autolink-headers ([09aa967](https://github.com/eshlox/gatsby-theme-axii/commit/09aa967fc7c230146834ba57e3d20f4d7c0a7d4d))
+* **shadowing:** fix for images shadowing ([10a8459](https://github.com/eshlox/gatsby-theme-axii/commit/10a84599aebe29b7b45f8901ea807e2088022a41)), closes [#16](https://github.com/eshlox/gatsby-theme-axii/issues/16)
+
+
+
+
+
 # 0.1.0 (2019-11-17)
 
 
