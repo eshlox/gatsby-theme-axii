@@ -5,24 +5,7 @@ import React from "react";
 
 const headerLinkStyles = {
   alignItems: "center",
-  display: "flex",
-  flexDirection: "row-reverse",
-  justifyContent: "flex-end",
-
-  "&:hover": {
-    a: {
-      visibility: "visible"
-    }
-  },
-
-  a: {
-    visibility: "hidden",
-
-    svg: {
-      height: "0.5em",
-      marginLeft: "0.2em"
-    }
-  }
+  display: "flex"
 };
 
 export const h1: React.FC = props => {
