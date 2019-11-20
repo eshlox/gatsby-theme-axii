@@ -48,9 +48,9 @@ const format = arr =>
 const settings = {
   attributesToSnippet: [`excerpt:20`],
   distinct: true,
-  attributeForDistinct: "slug",
+  attributeForDistinct: "fields.slug",
   attributesForFaceting: ["language", "tags", "categories"],
-  searchableAttributes: ["title", "tags", "categories", "slug"]
+  searchableAttributes: ["title", "tags", "categories", "fields.slug"]
 };
 
 const queries = [
