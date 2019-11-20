@@ -46,7 +46,6 @@ const format = arr =>
   });
 
 const settings = {
-  attributesToSnippet: [`excerpt:20`],
   distinct: true,
   attributeForDistinct: "fields.slug",
   attributesForFaceting: ["language", "tags", "categories"],
