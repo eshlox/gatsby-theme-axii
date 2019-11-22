@@ -1,4 +1,5 @@
 import {
+  a,
   blockquote,
   code,
   h1,
@@ -21,6 +22,7 @@ import {
 } from "./Elements";
 
 const MDXComponents = {
+  a,
   h1,
   h2,
   h3,
