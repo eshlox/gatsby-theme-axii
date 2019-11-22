@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.1.1...site@0.2.0) (2019-11-22)
+
+
+### Features
+
+* **component:** link component ([02f3db6](https://github.com/eshlox/gatsby-theme-axii/commit/02f3db6f47e59d76d87516f0045e14801a6a307a))
+
+
+
+
+
 ## [0.1.1](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.1.0...site@0.1.1) (2019-11-20)
 
 
