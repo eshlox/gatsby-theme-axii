@@ -4,9 +4,11 @@ import { jsx } from "@emotion/core";
 import React from "react";
 
 const headerLinkStyles = {
-  alignItems: "center",
-  display: "flex",
-  whiteSpace: "pre-wrap"
+  "a.anchor": {
+    svg: {
+      display: "inline-block"
+    }
+  }
 };
 
 export const h1: React.FC = props => {
