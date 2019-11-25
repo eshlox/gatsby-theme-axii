@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.2.0...@eshlox/gatsby-theme-axii@0.2.1) (2019-11-25)
+
+
+### Bug Fixes
+
+* **headings:** fix urls styling in headings ([cc59def](https://github.com/eshlox/gatsby-theme-axii/commit/cc59def9e40ff12a2d38c3b16b8bff14d643f1ed))
+
+
+
+
+
 # [0.2.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.1.1...@eshlox/gatsby-theme-axii@0.2.0) (2019-11-22)
 
 
