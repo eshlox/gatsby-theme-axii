@@ -1,4 +1,6 @@
 .cache
 .env
+.DS_Store
+lerna-debug.log
 node_modules
 public
