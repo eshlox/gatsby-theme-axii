@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.2.1...@eshlox/gatsby-theme-axii@0.3.0) (2019-11-30)
+
+
+### Bug Fixes
+
+* **algolia:** sort articles by date (desc) ([b894974](https://github.com/eshlox/gatsby-theme-axii/commit/b89497465d358918aaeef69b1fe4b6c133590a8a))
+
+
+### Features
+
+* **comments:** allow to disable comments ([ed8625d](https://github.com/eshlox/gatsby-theme-axii/commit/ed8625d7ddaa81dba5a3744400afcf41ce52b7e4))
+
+
+
+
+
 ## [0.2.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.2.0...@eshlox/gatsby-theme-axii@0.2.1) (2019-11-25)
 
 
