@@ -59,7 +59,8 @@ const settings = {
     "proximity",
     "attribute",
     "exact"
-  ]
+  ],
+  customRanking: ["asc(title)"]
 };
 
 const queries = [
