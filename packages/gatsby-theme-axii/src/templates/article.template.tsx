@@ -20,6 +20,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM Do, YYYY")
         language
+        comments
       }
       body
       excerpt(pruneLength: 200)
@@ -76,9 +77,11 @@ const PostTemplate = ({ data: { mdx, site } }: PostPageProps) => {
 
       <Support />
 
-      <Box maxWidth="1024px" p={5} my={5} mx="auto">
-        <Disqus config={disqusConfig} />
-      </Box>
+      {mdx.frontmatter.comments !== false ? (
+        <Box maxWidth="1024px" p={5} my={5} mx="auto">
+          <Disqus config={disqusConfig} />
+        </Box>
+      ) : null}
     </Layout>
   );
 };

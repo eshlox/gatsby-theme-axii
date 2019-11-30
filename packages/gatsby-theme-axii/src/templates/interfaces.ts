@@ -10,6 +10,7 @@ export default interface PostPageProps {
         date: string;
         title: string;
         language: string;
+        comments: boolean;
       };
     };
     site: {
