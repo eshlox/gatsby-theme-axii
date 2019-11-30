@@ -49,7 +49,17 @@ const settings = {
   distinct: true,
   attributeForDistinct: "fields.slug",
   attributesForFaceting: ["language", "tags", "categories"],
-  searchableAttributes: ["title", "tags", "categories", "fields.slug"]
+  searchableAttributes: ["title", "tags", "categories", "fields.slug"],
+  ranking: [
+    "desc(date)",
+    "typo",
+    "geo",
+    "words",
+    "filters",
+    "proximity",
+    "attribute",
+    "exact"
+  ]
 };
 
 const queries = [
