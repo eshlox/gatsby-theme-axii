@@ -1,17 +1,13 @@
 export default interface PostPageProps {
   data: {
-    mdx: {
+    article: {
       body: any;
       excerpt: string;
-      fields: {
-        slug: string;
-      };
-      frontmatter: {
-        date: string;
-        title: string;
-        language: string;
-        comments: boolean;
-      };
+      slug: string;
+      date: string;
+      title: string;
+      language: string;
+      comments: boolean;
     };
     site: {
       siteMetadata: {

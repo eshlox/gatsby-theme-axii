@@ -108,33 +108,22 @@ module.exports = options => {
           },
           feeds: [
             {
-              serialize: ({ query: { site, posts } }) => {
-                return posts.edges.map(edge => {
+              serialize: ({ query: { site, allArticle } }) => {
+                return allArticle.edges.map(edge => {
                   return {
-                    ...edge.node.frontmatter,
+                    ...edge.node,
                     description: edge.node.excerpt,
-                    url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                    guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                    categories: [
-                      ...edge.node.frontmatter.categories
-                      // ...edge.node.frontmatter.tags what if null?
-                    ]
-                    // custom_elements: [{ "content:encoded": edge.node.body }],
-                    // author: site.siteMetadata.name
+                    url: site.siteMetadata.siteUrl + edge.node.slug,
+                    guid: site.siteMetadata.siteUrl + edge.node.slug
                   };
                 });
               },
               query: `{
-              posts: allMdx(
-                filter: { fileAbsolutePath: { regex: "/posts/" } }
-              ) {
-                edges {
-                  node {
-                    excerpt
-                    fields {
+                allArticle {
+                  edges {
+                    node {
+                      excerpt
                       slug
-                    }
-                    frontmatter {
                       title
                       date(formatString: "YYYY-MM-DD")
                       tags
@@ -144,8 +133,7 @@ module.exports = options => {
                   }
                 }
               }
-            }
-              `,
+            `,
               output: "/rss.xml"
             }
           ]

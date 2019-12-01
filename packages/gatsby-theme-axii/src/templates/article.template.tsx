@@ -12,16 +12,12 @@ import articleStyles from "./styles";
 
 export const pageQuery = graphql`
   query BlogPostQuery($slug: String) {
-    mdx(fields: { slug: { eq: $slug } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        date(formatString: "MMMM Do, YYYY")
-        language
-        comments
-      }
+    article(slug: { eq: $slug }) {
+      slug
+      title
+      date(formatString: "MMMM Do, YYYY")
+      language
+      comments
       body
       excerpt(pruneLength: 200)
     }
@@ -38,21 +34,21 @@ export const pageQuery = graphql`
   }
 `;
 
-const PostTemplate = ({ data: { mdx, site } }: PostPageProps) => {
+const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
   const disqusConfig = {
-    identifier: mdx.fields.slug,
-    title: mdx.frontmatter.title,
-    url: `${site.siteMetadata.siteUrl + mdx.fields.slug}`
+    identifier: article.slug,
+    title: article.title,
+    url: `${site.siteMetadata.siteUrl + article.slug}`
   };
 
   return (
     <Layout>
       <Seo
-        title={mdx.frontmatter.title}
+        title={article.title}
         url={disqusConfig.url}
-        description={mdx.excerpt}
-        pathname={mdx.fields.slug}
-        language={mdx.frontmatter.language}
+        description={article.excerpt}
+        pathname={article.slug}
+        language={article.language}
       />
 
       <Box
@@ -63,21 +59,21 @@ const PostTemplate = ({ data: { mdx, site } }: PostPageProps) => {
         wordBreak="break-word"
       >
         <Text fontStyle="italic" fontSize="sm">
-          {mdx.frontmatter.date}
+          {article.date}
         </Text>
 
         <Heading as="h1" fontSize="5xl">
-          {mdx.frontmatter.title}
+          {article.title}
         </Heading>
       </Box>
 
       <Box maxWidth="1024px" p={5} mx="auto" css={{ ...articleStyles }}>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
+        <MDXRenderer>{article.body}</MDXRenderer>
       </Box>
 
       <Support />
 
-      {mdx.frontmatter.comments !== false ? (
+      {article.comments ? (
         <Box maxWidth="1024px" p={5} my={5} mx="auto">
           <Disqus config={disqusConfig} />
         </Box>

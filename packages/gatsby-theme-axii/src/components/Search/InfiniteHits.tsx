@@ -22,7 +22,7 @@ const InfiniteHits = ({ hits, hasMore, refineNext }) => (
         <PseudoBox
           key={hit.objectID}
           as={Link}
-          to={hit.fields.slug}
+          to={hit.slug}
           p={5}
           display="flex"
           shadow="md"
