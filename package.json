@@ -5,8 +5,8 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "cz-conventional-changelog": "^3.0.2",
-    "husky": "^3.0.9",
-    "lerna": "^3.18.3"
+    "husky": "^3.1.0",
+    "lerna": "^3.19.0"
   },
   "workspaces": [
     "packages/*"
