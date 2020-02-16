@@ -1,4 +1,5 @@
-import { Button, SvgIcon } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
+import SvgIcon from "@material-ui/core/SvgIcon";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import SupportQuery from "./interfaces";

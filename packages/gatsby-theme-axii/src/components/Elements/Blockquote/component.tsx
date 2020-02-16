@@ -1,4 +1,5 @@
-import { Container, Typography } from "@material-ui/core";
+import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
 import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
 import Alert from "@material-ui/lab/Alert";
 import React from "react";

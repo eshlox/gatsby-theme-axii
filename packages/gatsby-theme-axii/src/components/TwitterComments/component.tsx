@@ -1,4 +1,4 @@
-import { Button } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import React from "react";
 import useStyles from "./styles";

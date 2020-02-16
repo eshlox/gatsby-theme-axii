@@ -68,7 +68,6 @@
     "slugify": "^1.3.6"
   },
   "devDependencies": {
-    "@material-ui/codemod": "^4.5.0",
     "@types/react": "^16.9.19",
     "@types/react-helmet": "^5.0.15",
     "@types/react-instantsearch-dom": "^5.2.6"

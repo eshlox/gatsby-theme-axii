@@ -1,5 +1,6 @@
-import { Container, Grid } from "@material-ui/core";
 import Collapse from "@material-ui/core/Collapse";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
 import algoliasearch from "algoliasearch/lite";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
