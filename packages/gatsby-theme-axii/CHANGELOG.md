@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.4.1...@eshlox/gatsby-theme-axii@0.4.2) (2020-02-16)
+
+
+### Bug Fixes
+
+* **search:** algoliasearch credentials ([f7971fa](https://github.com/eshlox/gatsby-theme-axii/commit/f7971fa458c64675ce8ce2dd21483a175c251537))
+
+
+
+
+
 ## [0.4.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.4.0...@eshlox/gatsby-theme-axii@0.4.1) (2020-02-16)
 
 **Note:** Version bump only for package @eshlox/gatsby-theme-axii
