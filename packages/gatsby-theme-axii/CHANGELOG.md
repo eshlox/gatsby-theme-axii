@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.4.2...@eshlox/gatsby-theme-axii@0.4.3) (2020-02-16)
+
+
+### Bug Fixes
+
+* **paragraph:** center paragraph (production build issue) ([b2af774](https://github.com/eshlox/gatsby-theme-axii/commit/b2af7749b0e2baaf41cd56d87c6cffd6620b87a8))
+
+
+
+
+
 ## [0.4.2](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.4.1...@eshlox/gatsby-theme-axii@0.4.2) (2020-02-16)
 
 
