@@ -34,12 +34,9 @@ const p: React.FC<{ children: JSX.Element }> = props => {
   }
 
   return (
-    <Typography
-      className={classes.paragraph}
-      component={Container}
-      maxWidth="md"
-      {...props}
-    />
+    <Container className={classes.paragraph} maxWidth="md">
+      <Typography {...props} />
+    </Container>
   );
 };
 
