@@ -44,7 +44,6 @@ const Search = () => {
   const classes = useStyles();
   const [show, setShow] = React.useState(false);
   const handleToggle = () => setShow(!show);
-  const searchClient = algoliasearch(applicationId, searchApiKey);
 
   const searchSettings: SearchSettingsProps = useStaticQuery(query);
   const {
@@ -58,6 +57,8 @@ const Search = () => {
       }
     }
   } = searchSettings;
+
+  const searchClient = algoliasearch(applicationId, searchApiKey);
 
   return (
     <Container maxWidth="md">
