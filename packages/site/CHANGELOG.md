@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.3.0...site@0.4.0) (2020-02-16)
+
+
+### Features
+
+* **theme:** material UI ([bb80ca4](https://github.com/eshlox/gatsby-theme-axii/commit/bb80ca4e11ae803fa287a5a0f6c42739a0e0ae8b)), closes [#3](https://github.com/eshlox/gatsby-theme-axii/issues/3) [#5](https://github.com/eshlox/gatsby-theme-axii/issues/5) [#6](https://github.com/eshlox/gatsby-theme-axii/issues/6) [#7](https://github.com/eshlox/gatsby-theme-axii/issues/7) [#8](https://github.com/eshlox/gatsby-theme-axii/issues/8) [#10](https://github.com/eshlox/gatsby-theme-axii/issues/10) [#18](https://github.com/eshlox/gatsby-theme-axii/issues/18) [#22](https://github.com/eshlox/gatsby-theme-axii/issues/22)
+
+
+
+
+
 # [0.3.0](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.2.1...site@0.3.0) (2019-11-30)
 
 
