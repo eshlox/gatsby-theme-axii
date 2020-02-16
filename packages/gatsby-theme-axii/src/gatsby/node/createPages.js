@@ -25,7 +25,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
     createPage({
       path: node.slug,
       component: path.resolve(
-        `${__dirname}/../../templates/article.template.tsx`
+        `${__dirname}/../../templates/post/component.tsx`
       ),
 
       context: { slug: node.slug }

@@ -1,4 +1,4 @@
-export default interface AvatarProps {
+export interface AvatarData {
   file: {
     childImageSharp: {
       fluid: any;

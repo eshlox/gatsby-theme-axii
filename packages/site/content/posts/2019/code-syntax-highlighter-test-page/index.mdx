@@ -1,0 +1,114 @@
+---
+title: Code Syntax Highlighter Test Page
+date: 2019-11-05
+categories: ["theme"]
+tags: ["code"]
+language: en
+slug: code-syntax-highlighter-test-page
+---
+
+```tsx
+import React from "react";
+import useStyles from "./styles";
+
+const img: React.FC<{ className?: string }> = props => {
+  const classes = useStyles();
+
+  if (props.className === "gatsby-resp-image-image") {
+    return <img {...props} />;
+  }
+
+  return <img {...props} className={classes.root} />;
+};
+
+export default img;
+```
+
+Pellentesque ac posuere tortor. Pellentesque finibus quam quis ante pellentesque, nec elementum mi dictum. Suspendisse at sollicitudin ligula. Morbi gravida eget mi id dapibus. Mauris turpis est, iaculis sit amet nibh eu, congue rhoncus mauris. Cras suscipit mi id lacus condimentum, nec aliquam tellus pretium. Aliquam et dictum odio. Mauris auctor nisl metus, eu hendrerit arcu placerat et.
+
+```python
+from django.db import migrations, models
+
+
+def postgres_migration_prep_user_email_field(apps, schema_editor):
+    User = apps.get_model("users", "User")
+    field = "email"
+
+    filter_param = {"{}__exact".format(field): ""}
+    update_param = {field: None}
+    User.objects.filter(**filter_param).update(**update_param)
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [("users", "0003_auto_20190725_1034")]
+
+    operations = [
+        migrations.RunPython(
+            postgres_migration_prep_user_email_field, migrations.RunPython.noop
+        )
+    ]
+```
+
+```bash
+mkdir test
+```
+
+```md
+---
+title: Music from Aladdin (2019)
+date: 2019-11-04
+categories: ["music"]
+tags: ["youtube"]
+language: en
+slug: music-from-aladding-2019
+---
+
+Duis euismod pellentesque porttitor. Integer non auctor est. Duis commodo lacus massa, at volutpat sapien volutpat sed. Aliquam at commodo urna. Sed sed pellentesque est, vel malesuada ex. Sed pulvinar lorem metus, quis convallis quam laoreet a. Ut id condimentum leo. Aenean tristique justo at elementum aliquam. Proin venenatis risus consequat gravida sollicitudin. Duis placerat porta sapien. Quisque imperdiet placerat neque.
+
+![Photo by carly johnston on Unsplash](./images/carly-johnston-ndsA009eNy8-unsplash.jpg "Photo by carly johnston on Unsplash")
+
+<youtube videoId="mw5VIEIvuMI" />
+
+Curabitur accumsan nisi justo, at cursus odio mattis in. Sed dapibus metus eu vulputate facilisis. Aliquam tincidunt felis augue, et lacinia nisl porta sit amet. Suspendisse viverra sapien ac fermentum maximus.
+
+<youtube videoId="cfwopyHc5E4" />
+```
+
+```html
+<button
+  aria-controls="simple-menu"
+  aria-haspopup="true"
+  onClick="{handleClick}"
+>
+  Open Menu
+</button>
+<menu
+  id="simple-menu"
+  anchorEl="{anchorEl}"
+  keepMounted
+  open="{Boolean(anchorEl)}"
+  onClose="{handleClose}"
+>
+  <menuitem onClick="{handleClose}">Profile</menuitem>
+  <menuitem onClick="{handleClose}">My account</menuitem>
+  <menuitem onClick="{handleClose}">Logout</menuitem>
+</menu>
+```
+
+```
+import React from "react";
+import useStyles from "./styles";
+
+const img: React.FC<{ className?: string }> = props => {
+  const classes = useStyles();
+
+  if (props.className === "gatsby-resp-image-image") {
+    return <img {...props} />;
+  }
+
+  return <img {...props} className={classes.root} />;
+};
+
+export default img;
+```

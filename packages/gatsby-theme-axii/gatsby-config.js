@@ -9,6 +9,7 @@ module.exports = options => {
     plugins: [
       `gatsby-plugin-twitter`,
       `gatsby-plugin-typescript`,
+      `gatsby-plugin-material-ui`,
       {
         resolve: `gatsby-plugin-manifest`,
         options: {
@@ -18,7 +19,7 @@ module.exports = options => {
           background_color: `#ffffff`,
           theme_color: `#000000`,
           display: `standalone`,
-          icon: `src/images/icon.png`
+          icon: `content/images/icon.png`
         }
       },
       `gatsby-plugin-offline`,
@@ -33,21 +34,28 @@ module.exports = options => {
         resolve: `gatsby-plugin-page-creator`,
         options: {
           name: `pages`,
-          path: path.resolve(__dirname, `src/pages`)
+          path: `content/pages`
+        }
+      },
+      {
+        resolve: `gatsby-plugin-page-creator`,
+        options: {
+          name: `pages`,
+          path: path.resolve(__dirname, `content/pages`)
         }
       },
       {
         resolve: `gatsby-source-filesystem`,
         options: {
           name: `images`,
-          path: `src/images`
+          path: `content/images`
         }
       },
       {
         resolve: `gatsby-source-filesystem`,
         options: {
           name: `images`,
-          path: path.resolve(__dirname, `src/images`)
+          path: `content/pages/images`
         }
       },
       {
@@ -59,17 +67,16 @@ module.exports = options => {
           chunkSize: 10000 // default: 1000
         }
       },
-      {
-        resolve: `gatsby-plugin-disqus`,
-        options: {
-          shortname: siteMetadata.comments.disqus.shortname
-        }
-      },
       `gatsby-image`,
       `gatsby-plugin-react-helmet`,
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
-      `gatsby-transformer-remark`,
+      {
+        resolve: `gatsby-transformer-remark`,
+        options: {
+          plugins: [`gatsby-remark-images`, `gatsby-remark-embedder`]
+        }
+      },
       `gatsby-remark-copy-linked-files`,
       `gatsby-plugin-robots-txt`,
       `gatsby-plugin-sitemap`, // TODO: sort by date?
@@ -148,14 +155,22 @@ module.exports = options => {
           },
           gatsbyRemarkPlugins: [
             `gatsby-remark-copy-linked-files`,
-            `gatsby-remark-autolink-headers`,
+            {
+              resolve: `gatsby-remark-autolink-headers`,
+              options: {
+                icon: `<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation" title="fontSize large"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>`,
+                isIconAfterHeader: true
+              }
+            },
+            `gatsby-remark-embedder`,
             {
               resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 1200,
+                maxWidth: 1920,
                 quality: 80,
                 linkImagesToOriginal: false,
-                withWebp: true
+                withWebp: true,
+                showCaptions: false
               }
             },
             {
@@ -167,9 +182,25 @@ module.exports = options => {
             }
           ],
           plugins: [
-            `gatsby-remark-images`,
+            `gatsby-remark-embedder`,
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 1920,
+                quality: 80,
+                linkImagesToOriginal: false,
+                withWebp: true,
+                showCaptions: false
+              }
+            },
             `gatsby-remark-copy-linked-files`,
-            `gatsby-remark-autolink-headers`
+            {
+              resolve: `gatsby-remark-autolink-headers`,
+              options: {
+                icon: `<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation" title="fontSize large"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>`,
+                isIconAfterHeader: true
+              }
+            }
           ]
         }
       }

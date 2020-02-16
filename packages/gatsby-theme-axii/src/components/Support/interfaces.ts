@@ -1,9 +1,4 @@
-export default interface SupportProps {
-  file: {
-    childImageSharp: {
-      fixed: any;
-    };
-  };
+export default interface SupportQuery {
   site: {
     siteMetadata: {
       support: {

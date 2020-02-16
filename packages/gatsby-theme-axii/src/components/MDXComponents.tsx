@@ -1,3 +1,4 @@
+import { Components } from "@mdx-js/react";
 import {
   a,
   blockquote,
@@ -9,19 +10,23 @@ import {
   h5,
   h6,
   hr,
+  iframe,
+  img,
   inlineCode,
   li,
   ol,
   p,
   pre,
   table,
+  tbody,
   td,
   th,
-  ul,
-  youtube
+  thead,
+  tr,
+  ul
 } from "./Elements";
 
-const MDXComponents = {
+const MDXComponents: Components = {
   a,
   h1,
   h2,
@@ -31,17 +36,21 @@ const MDXComponents = {
   h6,
   p,
   hr,
+  img,
   inlineCode,
   code,
   blockquote,
-  youtube,
   pre,
   table,
   th,
   td,
+  tbody,
+  thead,
+  tr,
   ul,
   ol,
-  li
+  li,
+  iframe
 };
 
 export default MDXComponents;
