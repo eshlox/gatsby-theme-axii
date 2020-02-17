@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     blogButton: {
       marginLeft: theme.spacing(2),
-      marginRight: theme.spacing(2)
+      marginRight: theme.spacing(3)
     },
     title: {
       flexGrow: 1

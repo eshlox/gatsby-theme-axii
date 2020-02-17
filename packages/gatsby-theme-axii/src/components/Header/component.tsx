@@ -66,7 +66,7 @@ const Header: React.FC<{
           </Button>
           <IconButton
             edge="start"
-            aria-label="menu"
+            aria-label="dark mode"
             color="primary"
             onClick={() => props.changeTheme()}
           >
