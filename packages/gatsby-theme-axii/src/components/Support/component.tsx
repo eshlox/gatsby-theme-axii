@@ -43,7 +43,7 @@ const Support: React.FC<{ className: string }> = props => {
         </SvgIcon>
       }
     >
-      Buy me a coffee
+      buy me a coffee
     </Button>
   );
 };

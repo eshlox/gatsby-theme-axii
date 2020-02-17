@@ -15,7 +15,7 @@ const TwitterComments: React.FC<{ className: string; url: string }> = props => {
       href={`https://mobile.twitter.com/search?q=${props.url}`}
       target="_blank"
     >
-      Comment on Twitter!
+      comment on twitter
     </Button>
   );
 };
