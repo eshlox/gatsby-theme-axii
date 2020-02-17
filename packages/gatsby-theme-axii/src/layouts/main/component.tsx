@@ -39,7 +39,11 @@ const Layout: React.FC = props => {
               <CssBaseline />
               <Container component="main" maxWidth={false} disableGutters>
                 <Header isDark={isDark} changeTheme={changeTheme} />
-                <MDXProvider components={MDXComponents}>{children}</MDXProvider>
+                <main className={classes.main}>
+                  <MDXProvider components={MDXComponents}>
+                    {children}
+                  </MDXProvider>
+                </main>
               </Container>
               <Footer className={classes.footer} />
             </div>

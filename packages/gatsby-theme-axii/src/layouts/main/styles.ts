@@ -6,6 +6,10 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     minHeight: "100vh"
   },
+  main: {
+    marginBottom: theme.spacing(6),
+    marginTop: theme.spacing(6)
+  },
   footer: {
     marginTop: "auto"
   }
