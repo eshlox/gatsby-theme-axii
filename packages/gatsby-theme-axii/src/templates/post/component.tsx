@@ -94,7 +94,7 @@ const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
         )}
 
         {article.comments && disqusDisplayed ? (
-          <Box m={6}>
+          <Box className={classes.disqus}>
             <Disqus.DiscussionEmbed
               shortname={site.siteMetadata.comments.disqus.shortname}
               config={disqusConfig}

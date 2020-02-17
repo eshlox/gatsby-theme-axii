@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     button: {
       width: "100%"
+    },
+    disqus: {
+      marginTop: theme.spacing(4)
     }
   })
 );
