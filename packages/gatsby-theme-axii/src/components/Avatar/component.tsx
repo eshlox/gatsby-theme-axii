@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import React from "react";
-import { AvatarData } from "./interfaces";
+import { AvatarData, AvatarStyle } from "./interfaces";
 import useStyles from "./styles";
 
 const query = graphql`
@@ -16,15 +16,19 @@ const query = graphql`
   }
 `;
 
-const Avatar: React.FC = props => {
-  const classes = useStyles();
+const Avatar: React.FC<AvatarStyle> = ({
+  marginBottom = 0,
+  marginTop = 0,
+  ...rest
+}) => {
+  const classes = useStyles({ marginBottom, marginTop });
   const data: AvatarData = useStaticQuery(query);
 
   return (
     <Img
       fluid={data.file.childImageSharp.fluid}
       className={classes.avatar}
-      {...props}
+      {...rest}
     />
   );
 };

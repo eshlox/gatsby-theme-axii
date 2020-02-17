@@ -5,3 +5,8 @@ export interface AvatarData {
     };
   };
 }
+
+export interface AvatarStyle {
+  marginBottom: number;
+  marginTop: number;
+}
