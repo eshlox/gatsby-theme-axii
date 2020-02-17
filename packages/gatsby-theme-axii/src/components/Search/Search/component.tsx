@@ -70,8 +70,8 @@ const Search = () => {
           </Grid>
         </Grid>
 
-        <Collapse in={show} className={classes.filters}>
-          <Grid container spacing={2}>
+        <Collapse in={show}>
+          <Grid container spacing={1} className={classes.filters}>
             <Grid item xs={12} md={4}>
               <CustomMenuSelect
                 attribute="language"

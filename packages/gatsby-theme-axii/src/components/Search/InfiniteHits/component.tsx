@@ -5,9 +5,14 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListItemText from "@material-ui/core/ListItemText";
+import Typography from "@material-ui/core/Typography";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 import { Link } from "gatsby";
 import React from "react";
 import useStyles from "./styles";
+
+dayjs.extend(relativeTime);
 
 const InfiniteHits: React.FC<{
   hits: any;
@@ -17,6 +22,16 @@ const InfiniteHits: React.FC<{
   const classes = useStyles();
   const { hits, hasMore, refineNext } = props;
 
+  const postDate = (date: string) => {
+    const fromNow = dayjs(date).fromNow();
+
+    return (
+      <Typography variant="caption" className={classes.date} display="block">
+        {fromNow}
+      </Typography>
+    );
+  };
+
   return (
     <Box>
       <List className={classes.list}>
@@ -25,7 +40,7 @@ const InfiniteHits: React.FC<{
             <ListItemAvatar>
               <Avatar>{hit.title[0]}</Avatar>
             </ListItemAvatar>
-            <ListItemText primary={hit.title} secondary={hit.date} />
+            <ListItemText primary={hit.title} secondary={postDate(hit.date)} />
           </ListItem>
         ))}
       </List>
