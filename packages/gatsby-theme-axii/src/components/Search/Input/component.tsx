@@ -12,6 +12,7 @@ const Input: React.FC<{
 
   return (
     <TextField
+      id="search"
       type="search"
       label="Search..."
       variant="outlined"
@@ -20,7 +21,7 @@ const Input: React.FC<{
       fullWidth
       InputProps={{
         endAdornment: (
-          <IconButton onClick={showFilters}>
+          <IconButton onClick={showFilters} aria-label="show/hide filters">
             <FilterListIcon />
           </IconButton>
         )
