@@ -136,7 +136,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
   const site = result.data.site.siteMetadata;
   const image = result.data.file.childImageSharp.fixed.base64;
 
-  const browser = await chromium.launch({ dumpio: true });
+  const browser = await chromium.launch({ dumpio: true, headless: true });
 
   posts.forEach(async ({ node }, index, array) => {
     await generateImage(
