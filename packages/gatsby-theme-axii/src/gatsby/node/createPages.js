@@ -139,7 +139,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
   const browser = await chromium.launch({
     dumpio: true,
     headless: true,
-    ignoreDefaultArgs: ["--mute-audio"]
+    ignoreDefaultArgs: ["--mute-audio", "--no-gpu"]
   });
 
   posts.forEach(async ({ node }, index, array) => {
