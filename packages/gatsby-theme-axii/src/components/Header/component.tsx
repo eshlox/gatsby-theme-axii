@@ -39,7 +39,7 @@ const Header: React.FC<{
         <Toolbar>
           <IconButton
             edge="start"
-            aria-label="menu"
+            aria-label="home"
             color="primary"
             component={Link}
             to="/"
