@@ -36,11 +36,11 @@ const Seo = ({
   const site = results.site.siteMetadata;
 
   const siteTitle = `${title || site.siteTitle} - ${site.author.name}`;
-  const siteDescription = description || site.description;
+  const siteDescription = description || site.siteDescription;
   const twitterUsername = site.social.twitter.username;
 
-  const fullURL = (path: string) =>
-    path ? `${site.siteUrl}${path}` : site.siteUrl;
+  const fullURL = (pathname: string) =>
+    pathname ? `${site.siteUrl}${pathname}` : site.siteUrl;
 
   const metaTags = [
     { charset: "utf-8" },
@@ -49,16 +49,12 @@ const Seo = ({
       content: "IE=edge"
     },
     {
-      name: "viewport",
-      content: "width=device-width, initial-scale=1"
-    },
-    {
       rel: "canonical",
       href: fullURL(pathname)
     },
     { itemprop: "name", content: siteTitle },
     { itemprop: "description", content: siteDescription },
-    { itemprop: "image", content: fullURL(image) },
+    { itemprop: "image", content: `${fullURL(pathname)}/card.jpg` },
     { name: "description", content: siteDescription },
 
     { name: "twitter:card", content: "summary_large_image" },
@@ -68,12 +64,12 @@ const Seo = ({
     { name: "twitter:creator", content: twitterUsername },
     {
       name: "twitter:image",
-      content: fullURL(image)
+      content: `${fullURL(pathname)}/card.jpg`
     },
 
     { property: "og:title", content: siteTitle },
     { property: "og:url", content: url },
-    { property: "og:image", content: fullURL(image) },
+    { property: "og:image", content: `${fullURL(pathname)}/card.jpg` },
     { property: "og:description", content: siteDescription }
   ];
 
