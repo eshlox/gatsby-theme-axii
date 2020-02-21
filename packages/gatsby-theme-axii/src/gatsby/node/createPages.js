@@ -139,7 +139,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
   const browser = await chromium.launch({
     dumpio: true,
     headless: true,
-    ignoreDefaultArgs: [
+    args: [
       "--mute-audio",
       "--disable-gpu",
       "--hide-scrollbars",
