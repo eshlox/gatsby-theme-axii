@@ -1,0 +1,30 @@
+---
+title: Preformatted Text Test Page
+date: 2020-02-18
+categories: ["theme"]
+tags: ["pre"]
+language: en
+slug: preformatted-text-test-page
+---
+
+Duis malesuada ullamcorper diam, sit amet commodo ex posuere vitae. Praesent justo leo, pretium non hendrerit et, auctor ac ex. Integer a fringilla est. Maecenas imperdiet eleifend velit, at mollis ante mattis a. Nunc commodo consequat laoreet. Sed dui lorem, tempor vitae fringilla vel, tincidunt id est.
+
+    import Container from "@material-ui/core/Container";
+    import React from "react";
+
+    const pre: React.FC<{ children: JSX.Element }> = props => {
+    if (props.children?.props?.originalType === "code") {
+    return props.children;
+    }
+
+        return (
+          <Container maxWidth="md">
+            <pre {...props} />
+          </Container>
+        );
+
+    };
+
+    export default pre;
+
+Ut feugiat odio sed tellus gravida, sed ultricies enim tempor. Phasellus eu tristique eros, nec tincidunt sem. Cras et porta augue. Morbi quis nunc ut elit finibus tempor in at orci.
