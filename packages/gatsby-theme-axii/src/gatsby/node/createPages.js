@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { firefox } = require("playwright");
+const { chromium } = require("playwright");
 
 const template = (title, name, site, image) => `<html>
   <head>
@@ -136,7 +136,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
   const site = result.data.site.siteMetadata;
   const image = result.data.file.childImageSharp.fixed.base64;
 
-  const browser = await firefox.launch({ dumpio: true });
+  const browser = await chromium.launch({ dumpio: true });
 
   posts.forEach(async ({ node }, index, array) => {
     await generateImage(
