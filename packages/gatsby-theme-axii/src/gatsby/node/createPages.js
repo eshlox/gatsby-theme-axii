@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { webkit } = require("playwright");
+const { chromium } = require("playwright");
 
 const template = (title, name, site, image) => `<html>
   <head>
@@ -136,15 +136,16 @@ module.exports = async ({ graphql, actions, reporter }) => {
   const site = result.data.site.siteMetadata;
   const image = result.data.file.childImageSharp.fixed.base64;
 
-  const browser = await webkit.launch({
+  const browser = await chromium.launch({
     dumpio: true,
-    headless: true
-    // ignoreDefaultArgs: [
-    //   "--mute-audio",
-    //   "--disable-gpu",
-    //   "--hide-scrollbars",
-    //   "--no-sandbox"
-    // ]
+    headless: true,
+    ignoreDefaultArgs: [
+      "--mute-audio",
+      "--disable-gpu",
+      "--hide-scrollbars",
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
   });
 
   posts.forEach(async ({ node }, index, array) => {
