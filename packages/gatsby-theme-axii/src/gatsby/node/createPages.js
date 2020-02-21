@@ -145,6 +145,11 @@ module.exports = async ({ graphql, actions, reporter }) => {
       "--hide-scrollbars",
       "--no-sandbox",
       "--disable-setuid-sandbox"
+    ],
+    ignoreDefaultArgs: [
+      "--disable-software-rasterizer",
+      "--disable-dev-shm-usage",
+      "--disable-web-security"
     ]
   });
 
