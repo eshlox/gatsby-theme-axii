@@ -1,6 +1,7 @@
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import React, { useEffect, useState } from "react";
+import slugify from "slugify";
 
 const Select: React.FC<{
   items: any;
@@ -37,7 +38,6 @@ const Select: React.FC<{
 
   return (
     <Autocomplete
-      id="combo-box-demo"
       open={open}
       onOpen={() => {
         setOpen(true);
@@ -55,6 +55,7 @@ const Select: React.FC<{
       renderInput={params => (
         <TextField
           {...params}
+          id={slugify(placeholder)}
           label={placeholder}
           variant="outlined"
           fullWidth
