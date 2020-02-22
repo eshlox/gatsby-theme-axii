@@ -1,3 +1,5 @@
+const generateOgImages = require("../../scripts/generate-og-images");
+
 module.exports = async ({ graphql }) => {
   const result = await graphql(`
     query {
