@@ -1,4 +1,3 @@
-const fs = require("fs");
 const path = require("path");
 
 module.exports = async ({ graphql, actions, reporter }) => {
@@ -13,6 +12,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+    }
   `);
 
   if (result.errors) {
