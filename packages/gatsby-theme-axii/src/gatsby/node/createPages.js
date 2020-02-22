@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { chromium } = require("playwright");
+const chromium = require("chrome-aws-lambda");
 
 const template = (title, name, site, image) => `<html>
   <head>
@@ -136,21 +136,25 @@ module.exports = async ({ graphql, actions, reporter }) => {
   const site = result.data.site.siteMetadata;
   const image = result.data.file.childImageSharp.fixed.base64;
 
-  const browser = await chromium.launch({
-    dumpio: true,
-    headless: true,
-    args: [
-      "--mute-audio",
-      "--disable-gpu",
-      "--hide-scrollbars",
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ],
-    ignoreDefaultArgs: [
-      "--disable-software-rasterizer",
-      "--disable-dev-shm-usage",
-      "--disable-web-security"
-    ]
+  const browser = await chromium.puppeteer.launch({
+    args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath,
+    headless: chromium.headless
+    // dumpio: true,
+    // headless: true,
+    // args: [
+    //   "--mute-audio",
+    //   "--disable-gpu",
+    //   "--hide-scrollbars",
+    //   "--no-sandbox",
+    //   "--disable-setuid-sandbox"
+    // ],
+    // ignoreDefaultArgs: [
+    //   "--disable-software-rasterizer",
+    //   "--disable-dev-shm-usage",
+    //   "--disable-web-security"
+    // ]
   });
 
   posts.forEach(async ({ node }, index, array) => {
