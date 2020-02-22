@@ -1,4 +1,4 @@
-exports.onPostBuild = async ({ graphql }) => {
+module.exports = async ({ graphql }) => {
   const result = await graphql(`
     query {
       allArticle {
