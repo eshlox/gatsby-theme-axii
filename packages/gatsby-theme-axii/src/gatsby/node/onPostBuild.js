@@ -29,12 +29,12 @@ module.exports = async ({ graphql }) => {
     }
   `);
 
-  const posts = result.data.allArticle.edges.map(node => ({
+  const posts = result.data.allArticle.edges.map(({ node }) => ({
     title: node.title,
     slug: node.slug
   }));
 
-  const { name, site } = result.data.site.siteMetadata;
+  const { name, site } = result.data.site.siteMetadata.author;
 
   await generateOgImages(
     posts,
