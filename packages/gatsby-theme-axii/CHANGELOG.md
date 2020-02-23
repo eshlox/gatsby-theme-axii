@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.4.4...@eshlox/gatsby-theme-axii@0.5.0) (2020-02-23)
+
+
+### Bug Fixes
+
+* **createpages:** missing bracket ([ad36b36](https://github.com/eshlox/gatsby-theme-axii/commit/ad36b36931083bef3a23568b600c5ea5b892c169))
+* **puppeteer:** use chrome-aws-lambda instead of playwright ([f809750](https://github.com/eshlox/gatsby-theme-axii/commit/f809750b590599a9fd8054846f3b4ccdb8fbb4b2))
+
+
+### Features
+
+* **pre:** preformatted text component ([57b4286](https://github.com/eshlox/gatsby-theme-axii/commit/57b42862956e7d9784a106b9dd4552dc1d225ebc))
+* **seo:** open graph image generator ([46094ae](https://github.com/eshlox/gatsby-theme-axii/commit/46094aefdabb797341a50ed3b9924217435254b0))
+
+
+
+
+
 ## [0.4.4](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.4.3...@eshlox/gatsby-theme-axii@0.4.4) (2020-02-17)
 
 **Note:** Version bump only for package @eshlox/gatsby-theme-axii

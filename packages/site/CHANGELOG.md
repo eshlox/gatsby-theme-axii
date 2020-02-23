@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.4.4...site@0.5.0) (2020-02-23)
+
+
+### Features
+
+* **pre:** preformatted text component ([57b4286](https://github.com/eshlox/gatsby-theme-axii/commit/57b42862956e7d9784a106b9dd4552dc1d225ebc))
+* **seo:** open graph image generator ([46094ae](https://github.com/eshlox/gatsby-theme-axii/commit/46094aefdabb797341a50ed3b9924217435254b0))
+
+
+
+
+
 ## [0.4.4](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.4.3...site@0.4.4) (2020-02-17)
 
 **Note:** Version bump only for package site
