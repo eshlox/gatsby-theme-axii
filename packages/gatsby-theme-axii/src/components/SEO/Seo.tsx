@@ -70,6 +70,8 @@ const Seo = ({
     { property: "og:title", content: siteTitle },
     { property: "og:url", content: url },
     { property: "og:image", content: `${fullURL(pathname)}/card.jpg` },
+    { property: "og:width", content: 1200 },
+    { property: "og:height", content: 630 },
     { property: "og:description", content: siteDescription }
   ];
 
