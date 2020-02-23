@@ -141,7 +141,8 @@ module.exports = options => {
                 }
               }
             `,
-              output: "/rss.xml"
+              output: "/rss.xml",
+              title: `${siteMetadata.author.name} - ${siteMetadata.siteDescription}`
             }
           ]
         }
