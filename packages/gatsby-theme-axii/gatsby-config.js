@@ -22,6 +22,14 @@ module.exports = options => {
           icon: `content/images/icon.png`
         }
       },
+      {
+        resolve: `gatsby-plugin-canonical-urls`,
+        options: {
+          siteUrl: siteMetadata.siteUrl,
+          stripQueryString: true
+        }
+      },
+      `gatsby-plugin-remove-trailing-slashes`,
       `gatsby-plugin-offline`,
       {
         resolve: `gatsby-source-filesystem`,
