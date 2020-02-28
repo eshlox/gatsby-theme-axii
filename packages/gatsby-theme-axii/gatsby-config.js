@@ -134,6 +134,37 @@ module.exports = options => {
     }
   };
 
+  const sitemap = {
+    resolve: `gatsby-plugin-advanced-sitemap`,
+    options: {
+      query: `
+        {
+          allArticle {
+            edges {
+              node {
+                id
+                updated_at: date
+                slug
+              }
+            }
+          }
+        }`,
+      mapping: {
+        allArticle: {
+          sitemap: `posts`
+        }
+      },
+      exclude: [
+        `/dev-404-page`,
+        `/404`,
+        `/404.html`,
+        `/offline-plugin-app-shell-fallback`
+      ],
+      createLinkInHead: true,
+      addUncaughtPages: true
+    }
+  };
+
   return {
     siteMetadata,
     plugins: [
@@ -146,9 +177,9 @@ module.exports = options => {
       `gatsby-plugin-react-helmet`,
       `gatsby-plugin-robots-txt`,
       `gatsby-plugin-sharp`,
-      `gatsby-plugin-sitemap`, // TODO: sort by date?
       `gatsby-remark-copy-linked-files`,
       `gatsby-transformer-sharp`,
+      sitemap,
       manifest,
       canonicalUrls,
       algolia,
