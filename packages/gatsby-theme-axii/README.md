@@ -92,8 +92,7 @@ const options = {
       nickname: `eshlox`,
       // Author name. It's added to each page title.
       name: `Foo Bar`,
-      email: `email@example.com`,
-      site: `gatsby-theme-axii.netlify.com`
+      email: `email@example.com`
     },
     // Social accounts. Remove to disable.
     social: {
