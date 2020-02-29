@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.5.1...site@0.6.0) (2020-02-29)
+
+
+### Features
+
+* **sentry:** sentry plugin and settings ([37f7dae](https://github.com/eshlox/gatsby-theme-axii/commit/37f7daed545da95e133c8cdfdd3a2f503d6e7e2c))
+
+
+
+
+
 ## [0.5.1](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.5.0...site@0.5.1) (2020-02-24)
 
 **Note:** Version bump only for package site

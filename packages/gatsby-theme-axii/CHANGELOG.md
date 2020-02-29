@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.5.1...@eshlox/gatsby-theme-axii@0.6.0) (2020-02-29)
+
+
+### Bug Fixes
+
+* **seo:** fix og image path ([ed198b9](https://github.com/eshlox/gatsby-theme-axii/commit/ed198b952217f8e9c256363e2f038fe54df201b0))
+
+
+### Features
+
+* **sentry:** sentry plugin and settings ([37f7dae](https://github.com/eshlox/gatsby-theme-axii/commit/37f7daed545da95e133c8cdfdd3a2f503d6e7e2c))
+
+
+
+
+
 ## [0.5.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.5.0...@eshlox/gatsby-theme-axii@0.5.1) (2020-02-24)
 
 **Note:** Version bump only for package @eshlox/gatsby-theme-axii
