@@ -136,6 +136,11 @@ const options = {
           adminApiKey: process.env.ALGOLIA_ADMIN_API_KEY
         }
       }
+    },
+    errorReporting: {
+      sentry: {
+        dsn: process.env.SENTRY_DSN_URL
+      }
     }
   }
 };

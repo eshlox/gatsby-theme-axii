@@ -165,6 +165,15 @@ module.exports = options => {
     }
   };
 
+  const sentry = {
+    resolve: "gatsby-plugin-sentry",
+    options: {
+      dsn: siteMetadata.errorReporting.sentry.dsn,
+      environment: process.env.NODE_ENV,
+      enabled: () => process.env.NODE_ENV === "production"
+    }
+  };
+
   return {
     siteMetadata,
     plugins: [
@@ -185,6 +194,7 @@ module.exports = options => {
       algolia,
       rss,
       mdx,
+      sentry,
       {
         resolve: `gatsby-source-filesystem`,
         options: {
