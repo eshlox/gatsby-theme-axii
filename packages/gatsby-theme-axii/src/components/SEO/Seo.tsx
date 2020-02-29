@@ -43,9 +43,7 @@ const Seo = ({
     pathname ? `${site.siteUrl}${pathname}` : site.siteUrl;
 
   const ogImage = (pathname: string | undefined) =>
-    pathname
-      ? `${site.siteUrl}${pathname}`
-      : `${site.siteUrl}${pathname}/ogimage.png`;
+    pathname ? `${site.siteUrl}${pathname}` : `${site.siteUrl}/ogimage.png`;
 
   const metaTags = [
     { charset: "utf-8" },
