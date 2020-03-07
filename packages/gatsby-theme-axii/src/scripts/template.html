@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <style>
+      @font-face {
+        font-family: "Roboto";
+        src: url("./Roboto-Regular.ttf") format("truetype");
+      }
+      body {
+        color: white;
+        background-color: #303030;
+        font-family: "Roboto", sans-serif;
+        height: 630px;
+        margin: 0;
+        padding: 0;
+        width: 1200px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        height: 630px;
+        justify-content: space-between;
+        width: 1200px;
+      }
+
+      .header {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        font-size: 48px;
+        justify-content: center;
+        padding: 50px;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .footer {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: row;
+        font-size: 32px;
+        justify-content: space-between;
+        padding: 50px;
+      }
+
+      .author {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      img {
+        border-radius: 10%;
+        margin-right: 20px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="header" id="title"></div>
+      <div class="footer">
+        <div class="author">
+          <img src="./avatar.jpg" />
+          name
+        </div>
+        site
+      </div>
+    </div>
+  </body>
+</html>

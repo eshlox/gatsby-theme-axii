@@ -42,9 +42,6 @@ const Seo = ({
   const fullURL = (pathname: string) =>
     pathname ? `${site.siteUrl}${pathname}` : site.siteUrl;
 
-  const ogImage = (pathname: string | undefined) =>
-    pathname ? `${site.siteUrl}${pathname}` : `${site.siteUrl}/ogimage.png`;
-
   const metaTags = [
     { charset: "utf-8" },
     {
@@ -57,7 +54,7 @@ const Seo = ({
     },
     { itemprop: "name", content: siteTitle },
     { itemprop: "description", content: siteDescription },
-    { itemprop: "image", content: ogImage(image) },
+    { itemprop: "image", content: `${fullURL(pathname)}/card.jpg` },
     { name: "description", content: siteDescription },
 
     { name: "twitter:card", content: "summary" },
@@ -65,11 +62,13 @@ const Seo = ({
     { name: "twitter:title", content: siteTitle },
     { name: "twitter:description", content: siteDescription },
     { name: "twitter:creator", content: twitterUsername },
-    { name: "twitter:image", content: ogImage(image) },
+    { name: "twitter:image", content: `${fullURL(pathname)}/card.jpg` },
 
     { property: "og:title", content: siteTitle },
     { property: "og:url", content: url },
-    { property: "og:image", content: ogImage(image) },
+    { property: "og:image", content: `${fullURL(pathname)}/card.jpg` },
+    { property: "og:width", content: 1200 },
+    { property: "og:height", content: 630 },
     { property: "og:description", content: siteDescription }
   ];
 
