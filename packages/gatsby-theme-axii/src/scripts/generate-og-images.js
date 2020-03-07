@@ -3,13 +3,7 @@ const fs = require("fs-extra");
 const path = require("path");
 
 module.exports = async (posts, name, site, avatar) => {
-  const browser = await playwright.launchChromium({
-    args: chromium.args,
-    defaultViewport: chromium.defaultViewport,
-    executablePath: await chromium.executablePath,
-    headless: chromium.headless
-  });
-
+  const browser = await playwright.launchChromium();
   const page = await browser.newPage();
 
   let html = (
