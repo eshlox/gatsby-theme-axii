@@ -35,7 +35,7 @@ You can find the example site code in [packages/site](https://github.com/eshlox/
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "AWS_LAMBDA_FUNCTION_NAME=puppeteer gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean"
   }
