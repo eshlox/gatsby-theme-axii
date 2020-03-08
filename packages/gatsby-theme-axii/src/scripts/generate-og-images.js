@@ -1,9 +1,15 @@
-const playwright = require("playwright-aws-lambda");
+const chromium = require("chrome-aws-lambda");
 const fs = require("fs-extra");
 const path = require("path");
 
 module.exports = async (posts, name, site, avatar) => {
-  const browser = await playwright.launchChromium();
+  const browser = await chromium.puppeteer.launch({
+    args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath,
+    headless: chromium.headless
+  });
+
   const page = await browser.newPage();
 
   let html = (
