@@ -76,6 +76,7 @@
   "devDependencies": {
     "@types/react": "^16.9.19",
     "@types/react-helmet": "^5.0.15",
-    "@types/react-instantsearch-dom": "^5.2.6"
+    "@types/react-instantsearch-dom": "^5.2.6",
+    "puppeteer": "^2.1.1"
   }
 }
