@@ -57,7 +57,7 @@ const Seo = ({
     { itemprop: "image", content: `${fullURL(pathname)}/card.jpg` },
     { name: "description", content: siteDescription },
 
-    { name: "twitter:card", content: "summary" },
+    { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:site", content: twitterUsername },
     { name: "twitter:title", content: siteTitle },
     { name: "twitter:description", content: siteDescription },
