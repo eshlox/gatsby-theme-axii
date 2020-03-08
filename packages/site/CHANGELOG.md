@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.6.0...site@0.7.0) (2020-03-08)
+
+
+### Bug Fixes
+
+* **seo:** force puppeteer headless mode ([cbd3bdd](https://github.com/eshlox/gatsby-theme-axii/commit/cbd3bdd33935ef3609e7e7deae445c5219ab15e7))
+
+
+### Features
+
+* **seo:** generate og images (playwright) ([6d10802](https://github.com/eshlox/gatsby-theme-axii/commit/6d10802fd419a0c7082fae8b8947f37c0d8d33dc))
+
+
+
+
+
 # [0.6.0](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.5.1...site@0.6.0) (2020-02-29)
 
 

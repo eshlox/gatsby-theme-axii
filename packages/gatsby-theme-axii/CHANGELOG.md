@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.6.0...@eshlox/gatsby-theme-axii@0.7.0) (2020-03-08)
+
+
+### Bug Fixes
+
+* **seo:** import playwright instead of chrome-aws-lambda ([a937d09](https://github.com/eshlox/gatsby-theme-axii/commit/a937d0965a8ef048238add3ca0e0026cb45eb1b7))
+* **seo:** playwright - remove not required params ([637aa7c](https://github.com/eshlox/gatsby-theme-axii/commit/637aa7c2aa0bdf786cf89c5972b27eb68da60394))
+* **seo:** switch back to chrome-aws-lambda ([bc0d28a](https://github.com/eshlox/gatsby-theme-axii/commit/bc0d28aa1c8b92bbce4c3dd1118c4c096413f6dd))
+* **seo:** use puppeteer for local development ([dd9cc74](https://github.com/eshlox/gatsby-theme-axii/commit/dd9cc741be04432b09863ba4ca8abd1097842d0a))
+* **seo:** use twitter summary_large_image ([6f2707b](https://github.com/eshlox/gatsby-theme-axii/commit/6f2707bab5e72812cefadf4b11ba1acc2780e17a))
+
+
+### Features
+
+* **seo:** generate og images (playwright) ([6d10802](https://github.com/eshlox/gatsby-theme-axii/commit/6d10802fd419a0c7082fae8b8947f37c0d8d33dc))
+
+
+
+
+
 # [0.6.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.5.1...@eshlox/gatsby-theme-axii@0.6.0) (2020-02-29)
 
 
