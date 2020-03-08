@@ -4,7 +4,7 @@
   "version": "0.6.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "AWS_LAMBDA_FUNCTION_NAME=puppeteer gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean"
   },
