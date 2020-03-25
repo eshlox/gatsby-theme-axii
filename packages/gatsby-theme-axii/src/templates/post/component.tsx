@@ -65,7 +65,7 @@ const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
 
       <Container maxWidth="md" className={classes.header}>
         <Typography>{article.date}</Typography>
-        <Typography variant="h2" component="h1">
+        <Typography variant="h1" component="h1">
           {article.title}
         </Typography>
       </Container>
@@ -85,7 +85,6 @@ const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
         {article.comments && !disqusDisplayed && (
           <Button
             variant="contained"
-            size="large"
             className={classes.button}
             onClick={() => setDisqusDisplayed(true)}
           >
