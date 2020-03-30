@@ -20,6 +20,10 @@ const Layout: React.FC = props => {
       {({ isDark, changeTheme }) => (
         <React.Fragment>
           <Helmet>
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            />
             <meta
               name="viewport"
               content="minimum-scale=1, initial-scale=1, width=device-width"
