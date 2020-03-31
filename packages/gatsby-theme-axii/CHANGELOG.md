@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.7.1...@eshlox/gatsby-theme-axii@0.7.2) (2020-03-31)
+
+
+### Reverts
+
+* **favicons:** bring back manifest plugin ([20a3ceb](https://github.com/eshlox/gatsby-theme-axii/commit/20a3ceb8972d52555a152cab7e1aa0c6c51c4090))
+
+
+
+
+
 ## [0.7.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.7.0...@eshlox/gatsby-theme-axii@0.7.1) (2020-03-31)
 
 
