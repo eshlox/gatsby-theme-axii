@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.7.0...@eshlox/gatsby-theme-axii@0.7.1) (2020-03-31)
+
+
+### Reverts
+
+* **fonts:** bring back the roboto font ([4bfc399](https://github.com/eshlox/gatsby-theme-axii/commit/4bfc3991ce05f3116dc020a8158d06522ec6d992))
+
+
+
+
+
 # [0.7.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.6.0...@eshlox/gatsby-theme-axii@0.7.0) (2020-03-08)
 
 

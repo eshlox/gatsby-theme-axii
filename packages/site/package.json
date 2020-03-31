@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "site",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "license": "MIT",
   "scripts": {
     "build": "AWS_LAMBDA_FUNCTION_NAME=puppeteer gatsby build",
@@ -9,7 +9,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@eshlox/gatsby-theme-axii": "0.7.0",
+    "@eshlox/gatsby-theme-axii": "0.7.1",
     "gatsby": "^2.20.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
