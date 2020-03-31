@@ -4,6 +4,19 @@ const queries = require("./src/utils/algolia");
 module.exports = options => {
   const { siteMetadata } = options;
 
+  const manifest = {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      background_color: `#ffffff`,
+      display: `standalone`,
+      icon: `content/images/icon.png`,
+      name: siteMetadata.manifest.name,
+      short_name: siteMetadata.manifest.short_name,
+      start_url: `/`,
+      theme_color: `#000000`
+    }
+  };
+
   const canonicalUrls = {
     resolve: `gatsby-plugin-canonical-urls`,
     options: {
@@ -175,6 +188,7 @@ module.exports = options => {
       `gatsby-remark-copy-linked-files`,
       `gatsby-transformer-sharp`,
       sitemap,
+      manifest,
       canonicalUrls,
       algolia,
       rss,
