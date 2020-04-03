@@ -5,19 +5,19 @@ import { ThemeOptions } from "@material-ui/core/styles/createMuiTheme";
 
 const baseTheme: ThemeOptions = {
   typography: {
-    htmlFontSize: 18,
-    fontSize: 18,
-    h1: { fontSize: "4rem" },
-    h2: { fontSize: "3rem" },
-    h3: { fontSize: "2.25rem" },
-    h4: { fontSize: "1.875rem" },
-    h5: { fontSize: "1.5rem" },
-    h6: { fontSize: "1.25rem" }
+    htmlFontSize: 17,
+    fontSize: 17,
+    h1: { fontSize: "3rem" },
+    h2: { fontSize: "2.25rem" },
+    h3: { fontSize: "1.875rem" },
+    h4: { fontSize: "1.5rem" },
+    h5: { fontSize: "1.25rem" },
+    h6: { fontSize: "1.125rem" },
   },
   palette: {
     primary: blue,
-    secondary: orange
-  }
+    secondary: orange,
+  },
 };
 
 let darkThemeOptions = { ...baseTheme };
