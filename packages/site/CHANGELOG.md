@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.3](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.7.2...site@0.7.3) (2020-04-05)
+
+**Note:** Version bump only for package site
+
+
+
+
+
 ## [0.7.2](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.7.1...site@0.7.2) (2020-03-31)
 
 **Note:** Version bump only for package site
