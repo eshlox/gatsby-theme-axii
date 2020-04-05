@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@eshlox/gatsby-theme-axii": "0.7.3",
-    "gatsby": "^2.20.6",
+    "gatsby": "^2.20.12",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
