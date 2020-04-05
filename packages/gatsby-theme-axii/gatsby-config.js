@@ -1,7 +1,7 @@
 const path = require("path");
 const queries = require("./src/utils/algolia");
 
-module.exports = options => {
+module.exports = (options) => {
   const { siteMetadata } = options;
 
   const manifest = {
@@ -13,16 +13,16 @@ module.exports = options => {
       name: siteMetadata.manifest.name,
       short_name: siteMetadata.manifest.short_name,
       start_url: `/`,
-      theme_color: `#000000`
-    }
+      theme_color: `#000000`,
+    },
   };
 
   const canonicalUrls = {
     resolve: `gatsby-plugin-canonical-urls`,
     options: {
       siteUrl: siteMetadata.siteUrl,
-      stripQueryString: true
-    }
+      stripQueryString: true,
+    },
   };
 
   const algolia = {
@@ -30,9 +30,10 @@ module.exports = options => {
     options: {
       appId: siteMetadata.search.algolia.posts.applicationId,
       apiKey: siteMetadata.search.algolia.posts.adminApiKey,
+      indexName: siteMetadata.search.algolia.posts.indexName,
       queries,
-      chunkSize: 10000 // default: 1000
-    }
+      chunkSize: 10000, // default: 1000
+    },
   };
 
   const mdx = {
@@ -40,7 +41,7 @@ module.exports = options => {
     options: {
       extensions: [`.mdx`, `.md`],
       defaultLayouts: {
-        default: require.resolve(`./src/layouts/index.ts`)
+        default: require.resolve(`./src/layouts/index.ts`),
       },
       gatsbyRemarkPlugins: [
         `gatsby-remark-copy-linked-files`,
@@ -52,18 +53,18 @@ module.exports = options => {
             quality: 80,
             linkImagesToOriginal: false,
             withWebp: true,
-            showCaptions: false
-          }
+            showCaptions: false,
+          },
         },
         {
           resolve: "gatsby-remark-external-links",
           options: {
             target: "_blank",
-            rel: "noreferrer"
-          }
-        }
-      ]
-    }
+            rel: "noreferrer",
+          },
+        },
+      ],
+    },
   };
 
   const rss = {
@@ -83,7 +84,7 @@ module.exports = options => {
     `,
       setup: ({
         query: {
-          site: { siteMetadata }
+          site: { siteMetadata },
         },
         ...rest
       }) => {
@@ -96,18 +97,18 @@ module.exports = options => {
 
         return {
           ...siteMetadataModified,
-          ...rest
+          ...rest,
         };
       },
       feeds: [
         {
           serialize: ({ query: { site, allArticle } }) => {
-            return allArticle.edges.map(edge => {
+            return allArticle.edges.map((edge) => {
               return {
                 ...edge.node,
                 description: edge.node.excerpt,
                 url: site.siteMetadata.siteUrl + edge.node.slug,
-                guid: site.siteMetadata.siteUrl + edge.node.slug
+                guid: site.siteMetadata.siteUrl + edge.node.slug,
               };
             });
           },
@@ -128,10 +129,10 @@ module.exports = options => {
           }
         `,
           output: "/rss.xml",
-          title: `${siteMetadata.author.name} - ${siteMetadata.siteDescription}`
-        }
-      ]
-    }
+          title: `${siteMetadata.author.name} - ${siteMetadata.siteDescription}`,
+        },
+      ],
+    },
   };
 
   const sitemap = {
@@ -151,18 +152,18 @@ module.exports = options => {
         }`,
       mapping: {
         allArticle: {
-          sitemap: `posts`
-        }
+          sitemap: `posts`,
+        },
       },
       exclude: [
         `/dev-404-page`,
         `/404`,
         `/404.html`,
-        `/offline-plugin-app-shell-fallback`
+        `/offline-plugin-app-shell-fallback`,
       ],
       createLinkInHead: true,
-      addUncaughtPages: true
-    }
+      addUncaughtPages: true,
+    },
   };
 
   const sentry = {
@@ -170,8 +171,8 @@ module.exports = options => {
     options: {
       dsn: siteMetadata.errorReporting.sentry.dsn,
       environment: process.env.NODE_ENV,
-      enabled: () => process.env.NODE_ENV === "production"
-    }
+      enabled: () => process.env.NODE_ENV === "production",
+    },
   };
 
   return {
@@ -198,37 +199,37 @@ module.exports = options => {
         resolve: `gatsby-source-filesystem`,
         options: {
           name: `posts`,
-          path: `content/posts`
-        }
+          path: `content/posts`,
+        },
       },
       {
         resolve: `gatsby-source-filesystem`,
         options: {
           name: `images`,
-          path: `content/images`
-        }
+          path: `content/images`,
+        },
       },
       {
         resolve: `gatsby-source-filesystem`,
         options: {
           name: `images`,
-          path: `content/pages/images`
-        }
+          path: `content/pages/images`,
+        },
       },
       {
         resolve: `gatsby-plugin-page-creator`,
         options: {
           name: `pages`,
-          path: `content/pages`
-        }
+          path: `content/pages`,
+        },
       },
       {
         resolve: `gatsby-plugin-page-creator`,
         options: {
           name: `pages`,
-          path: path.resolve(__dirname, `content/pages`)
-        }
-      }
-    ]
+          path: path.resolve(__dirname, `content/pages`),
+        },
+      },
+    ],
   };
 };
