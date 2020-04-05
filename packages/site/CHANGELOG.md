@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.4](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.7.3...site@0.7.4) (2020-04-05)
+
+
+### Bug Fixes
+
+* **algolia:** add index name ([3992d00](https://github.com/eshlox/gatsby-theme-axii/commit/3992d00e2c0b260844331b104ddf4933589d0252))
+
+
+
+
+
 ## [0.7.3](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.7.2...site@0.7.3) (2020-04-05)
 
 **Note:** Version bump only for package site

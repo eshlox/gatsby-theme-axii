@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.4](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.7.3...@eshlox/gatsby-theme-axii@0.7.4) (2020-04-05)
+
+
+### Bug Fixes
+
+* **algolia:** add index name ([3992d00](https://github.com/eshlox/gatsby-theme-axii/commit/3992d00e2c0b260844331b104ddf4933589d0252))
+* **algolia:** downgrade gatsby algolia plugin ([9b7361a](https://github.com/eshlox/gatsby-theme-axii/commit/9b7361a515b527d3a1abf71918b9840af9a86cf8))
+
+
+
+
+
 ## [0.7.3](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.7.2...@eshlox/gatsby-theme-axii@0.7.3) (2020-04-05)
 
 **Note:** Version bump only for package @eshlox/gatsby-theme-axii
