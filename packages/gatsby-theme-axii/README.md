@@ -48,21 +48,27 @@ You can find the example site code in [packages/site](https://github.com/eshlox/
 npm install gatsby @eshlox/gatsby-theme-axii
 ```
 
-3. Create `.env` file to provide Algolia credentials.
+3. Create an Algolia app with two API keys.
+
+- search API key - it requires `search` ACL, it should use `Posts` index and should have correct `HTTP Referers`
+- admin API key - it requires the following ACLs: `addObject`, `deleteObject` `editSettings` and `settings` and access to two indices: `Posts` and `Posts_tmp`.
+
+4. Create `.env` file to provide Algolia credentials.
 
 ```env
 ALGOLIA_APPLICATION_ID=APP-ID
 ALGOLIA_ADMIN_API_KEY=ADMIN-API-KEY
 ALGOLIA_SEARCH_API_KEY=SEARCH-API-KEY
+ALGOLIA_INDEX_NAME=Posts
 ```
 
-4. Run the development server.
+5. Run the development server.
 
 ```sh
 npm run develop
 ```
 
-5. Build the site.
+6. Build the site.
 
 ```sh
 npm run build
@@ -93,40 +99,40 @@ const options = {
       // Author name. It's added to each page title.
       name: `Foo Bar`,
       email: `email@example.com`,
-      site: `gatsby-theme-axii.netlify.com`
+      site: `gatsby-theme-axii.netlify.com`,
     },
     // Social accounts. Remove to disable.
     social: {
       twitter: {
         username: "eshlox",
-        url: "https://twitter.com/eshlox"
+        url: "https://twitter.com/eshlox",
       },
       github: {
-        url: "https://github.com/eshlox/gatsby-theme-axii"
+        url: "https://github.com/eshlox/gatsby-theme-axii",
       },
       linkedin: {
-        url: "https://linkedin.com/eshlox"
+        url: "https://linkedin.com/eshlox",
       },
       telegram: {
-        url: "https://telegram.me/eshlox"
-      }
+        url: "https://telegram.me/eshlox",
+      },
     },
     // Data used for the manifest page file
     manifest: {
       name: `AXII - A Gatsby blog theme`,
-      short_name: `AXII`
+      short_name: `AXII`,
     },
     // Data used to display support component. Remove to disable.
     support: {
       buymeacoffee: {
-        url: "https://www.buymeacoffee.com/eshlox"
-      }
+        url: "https://www.buymeacoffee.com/eshlox",
+      },
     },
     // Comments services. Remove to disable.
     comments: {
       disqus: {
-        shortname: "axii-a-gatsby-theme"
-      }
+        shortname: "axii-a-gatsby-theme",
+      },
     },
     // Alogolia application ID and credentials
     search: {
@@ -134,27 +140,28 @@ const options = {
         posts: {
           applicationId: process.env.ALGOLIA_APPLICATION_ID,
           searchApiKey: process.env.ALGOLIA_SEARCH_API_KEY,
-          adminApiKey: process.env.ALGOLIA_ADMIN_API_KEY
-        }
-      }
+          adminApiKey: process.env.ALGOLIA_ADMIN_API_KEY,
+          indexName: process.env.ALGOLIA_INDEX_NAME,
+        },
+      },
     },
     errorReporting: {
       sentry: {
-        dsn: process.env.SENTRY_DSN_URL
-      }
-    }
-  }
+        dsn: process.env.SENTRY_DSN_URL,
+      },
+    },
+  },
 };
 
 const plugins = [
   {
     resolve: "@eshlox/gatsby-theme-axii",
-    options
-  }
+    options,
+  },
 ];
 
 module.exports = {
-  plugins
+  plugins,
 };
 ```
 
