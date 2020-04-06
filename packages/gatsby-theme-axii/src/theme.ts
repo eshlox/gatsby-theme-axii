@@ -7,12 +7,12 @@ const baseTheme: ThemeOptions = {
   typography: {
     htmlFontSize: 17,
     fontSize: 17,
-    h1: { fontSize: "3rem" },
-    h2: { fontSize: "2.25rem" },
-    h3: { fontSize: "1.875rem" },
-    h4: { fontSize: "1.5rem" },
-    h5: { fontSize: "1.25rem" },
-    h6: { fontSize: "1.125rem" },
+    h1: { fontSize: "3rem", fontWeight: 500 },
+    h2: { fontSize: "2.25rem", fontWeight: 500 },
+    h3: { fontSize: "1.875rem", fontWeight: 500 },
+    h4: { fontSize: "1.5rem", fontWeight: 500 },
+    h5: { fontSize: "1.25rem", fontWeight: 500 },
+    h6: { fontSize: "1.125rem", fontWeight: 500 },
   },
   palette: {
     primary: blue,
