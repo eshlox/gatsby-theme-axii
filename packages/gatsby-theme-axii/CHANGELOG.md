@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.7.5...@eshlox/gatsby-theme-axii@0.8.0) (2020-04-25)
+
+
+### Bug Fixes
+
+* **helmet:** fix import ([a52a987](https://github.com/eshlox/gatsby-theme-axii/commit/a52a987a4609d910784381c6258d3bae33925e33))
+
+
+### Features
+
+* **404:** 404 page ([b763db0](https://github.com/eshlox/gatsby-theme-axii/commit/b763db02339c19e2d3e02ce0ca794a330f2aafdc))
+
+
+
+
+
 ## [0.7.5](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.7.4...@eshlox/gatsby-theme-axii@0.7.5) (2020-04-06)
 
 **Note:** Version bump only for package @eshlox/gatsby-theme-axii
