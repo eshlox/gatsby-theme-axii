@@ -217,6 +217,13 @@ module.exports = (options) => {
         },
       },
       {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `images`,
+          path: path.resolve(__dirname, `content/pages/images`),
+        },
+      },
+      {
         resolve: `gatsby-plugin-page-creator`,
         options: {
           name: `pages`,
