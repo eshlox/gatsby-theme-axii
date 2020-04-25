@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import SeoProps from "./interfaces";
 
 const seoQuery = graphql`
@@ -30,7 +30,7 @@ const Seo = ({
   image,
   language,
   children,
-  pathname
+  pathname,
 }: SeoProps) => {
   const results = useStaticQuery(seoQuery);
   const site = results.site.siteMetadata;
@@ -46,11 +46,11 @@ const Seo = ({
     { charset: "utf-8" },
     {
       "http-equiv": "X-UA-Compatible",
-      content: "IE=edge"
+      content: "IE=edge",
     },
     {
       rel: "canonical",
-      href: fullURL(pathname)
+      href: fullURL(pathname),
     },
     { itemprop: "name", content: siteTitle },
     { itemprop: "description", content: siteDescription },
@@ -69,7 +69,7 @@ const Seo = ({
     { property: "og:image", content: `${fullURL(pathname)}/card.jpg` },
     { property: "og:width", content: 1200 },
     { property: "og:height", content: 630 },
-    { property: "og:description", content: siteDescription }
+    { property: "og:description", content: siteDescription },
   ];
 
   return (
