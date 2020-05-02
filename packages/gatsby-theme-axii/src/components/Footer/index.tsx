@@ -38,10 +38,14 @@ const query = graphql`
   }
 `;
 
-const Footer: React.FC<{ className: string }> = (props) => {
+const Footer: React.FC<{ className: string }> = (props: {
+  className: string;
+}) => {
   const classes = useStyles();
-  const currentYear = () => new Date().getFullYear();
+  const currentYear = (): number => new Date().getFullYear();
   const mailto = (email: string): string => `mailto:${email}`;
+
+  const { className, ...rest } = props;
 
   const data: FooterProps = useStaticQuery(query);
   const {
@@ -57,8 +61,8 @@ const Footer: React.FC<{ className: string }> = (props) => {
     <Grid
       container
       component="footer"
-      className={`${classes.root} ${props.className}`}
-      {...props}
+      className={`${classes.root} ${className}`}
+      {...rest}
     >
       <Grid item sm={12} md={6} className={classes.copyright}>
         &copy; {currentYear()} {name}
