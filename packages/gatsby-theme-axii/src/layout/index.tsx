@@ -22,18 +22,18 @@ const Layout: React.FC = ({ children }) => {
   );
 
   return (
-    <HelmetProvider>
-      <Helmet>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-        />
-        <meta
-          name="twitter:widgets:theme"
-          content={prefersDarkMode ? "dark" : "light"}
-        />
-      </Helmet>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <HelmetProvider>
+        <Helmet>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          />
+          <meta
+            name="twitter:widgets:theme"
+            content={prefersDarkMode ? "dark" : "light"}
+          />
+        </Helmet>
         <CssBaseline />
         <Box className={classes.root}>
           <Header className={classes.header} />
@@ -42,8 +42,8 @@ const Layout: React.FC = ({ children }) => {
           </Container>
           <Footer className={classes.footer} />
         </Box>
-      </ThemeProvider>
-    </HelmetProvider>
+      </HelmetProvider>
+    </ThemeProvider>
   );
 };
 
