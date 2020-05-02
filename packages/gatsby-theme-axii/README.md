@@ -104,7 +104,7 @@ const options = {
     // Social accounts. Remove to disable.
     social: {
       twitter: {
-        username: "eshlox",
+        handle: "@eshlox",
         url: "https://twitter.com/eshlox",
       },
       github: {

@@ -17,14 +17,6 @@ module.exports = (options) => {
     },
   };
 
-  const canonicalUrls = {
-    resolve: `gatsby-plugin-canonical-urls`,
-    options: {
-      siteUrl: siteMetadata.siteUrl,
-      stripQueryString: true,
-    },
-  };
-
   const algolia = {
     resolve: `gatsby-plugin-algolia`,
     options: {
@@ -41,7 +33,7 @@ module.exports = (options) => {
     options: {
       extensions: [`.mdx`, `.md`],
       defaultLayouts: {
-        default: require.resolve(`./src/layouts/index.ts`),
+        default: require.resolve("./src/templates/page/index.tsx"),
       },
       gatsbyRemarkPlugins: [
         `gatsby-remark-copy-linked-files`,
@@ -49,11 +41,12 @@ module.exports = (options) => {
         {
           resolve: `gatsby-remark-images`,
           options: {
-            maxWidth: 1920,
+            maxWidth: 960,
             quality: 80,
-            linkImagesToOriginal: false,
+            linkImagesToOriginal: true,
             withWebp: true,
             showCaptions: false,
+            disableBgImageOnAlpha: true,
           },
         },
         {
@@ -64,6 +57,40 @@ module.exports = (options) => {
           },
         },
       ],
+    },
+  };
+
+  const seo = {
+    resolve: "gatsby-plugin-next-seo",
+    options: {
+      title: siteMetadata.author.name,
+      titleTemplate: `%s | ${siteMetadata.author.name}`,
+      language: "en",
+      description: siteMetadata.siteDescription,
+      canonical: siteMetadata.siteUrl,
+      openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: siteMetadata.siteUrl,
+        images: [
+          {
+            url: `${siteMetadata.siteUrl}/static/og.jpg`,
+            width: 1200,
+            height: 630,
+          },
+        ],
+        profile: {
+          firstName: siteMetadata.author.firstName,
+          lastName: siteMetadata.author.lastName,
+          username: siteMetadata.author.nickname,
+          gender: siteMetadata.author.gender,
+        },
+      },
+      twitter: {
+        handle: siteMetadata.social.twitter.handle,
+        site: siteMetadata.social.twitter.handle,
+        cardType: "summary_large_image",
+      },
     },
   };
 
@@ -183,14 +210,13 @@ module.exports = (options) => {
       `gatsby-plugin-remove-trailing-slashes`,
       `gatsby-plugin-twitter`,
       `gatsby-plugin-typescript`,
-      `gatsby-plugin-react-helmet`,
       `gatsby-plugin-robots-txt`,
       `gatsby-plugin-sharp`,
       `gatsby-remark-copy-linked-files`,
       `gatsby-transformer-sharp`,
+      seo,
       sitemap,
       manifest,
-      canonicalUrls,
       algolia,
       rss,
       mdx,

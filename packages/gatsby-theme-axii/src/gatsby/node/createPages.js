@@ -24,11 +24,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
   posts.forEach(({ node }) => {
     createPage({
       path: node.slug,
-      component: path.resolve(
-        `${__dirname}/../../templates/post/component.tsx`
-      ),
-
-      context: { slug: node.slug }
+      component: path.resolve(`${__dirname}/../../templates/post/index.tsx`),
+      context: { slug: node.slug },
     });
   });
 };

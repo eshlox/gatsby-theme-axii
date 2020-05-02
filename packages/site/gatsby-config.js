@@ -9,12 +9,15 @@ const options = {
     author: {
       nickname: `eshlox`,
       name: `AXII - A Gatsby theme`,
+      firstName: "AXII",
+      lastName: "A Gatsby theme",
       email: `eshlox@vertolabs.com`,
       site: "gatsby-theme-axii.netlify.com",
+      gender: "male",
     },
     social: {
       twitter: {
-        username: "eshlox",
+        handle: "@eshlox",
         url: "https://twitter.com/eshlox",
       },
       github: {

@@ -8,6 +8,8 @@ export default interface PostPageProps {
       title: string;
       language: string;
       comments: boolean;
+      tags: string[];
+      categories: string[];
     };
     site: {
       siteMetadata: {

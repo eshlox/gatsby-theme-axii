@@ -1,13 +1,11 @@
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      marginBottom: theme.spacing(4),
-      marginTop: theme.spacing(4),
-      maxWidth: "100%"
-    }
-  })
-);
+const useStyles = makeStyles({
+  root: {
+    display: "block",
+    margin: "0 auto",
+    maxWidth: "100%",
+  },
+});
 
 export default useStyles;

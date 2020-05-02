@@ -4,15 +4,14 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     list: {
       marginTop: theme.spacing(1),
-      marginBottom: theme.spacing(1)
+      marginBottom: theme.spacing(1),
     },
     date: {
-      fontStyle: "italic"
+      fontStyle: "italic",
     },
     button: {
       marginBottom: theme.spacing(3),
-      width: "100%"
-    }
+    },
   })
 );
 

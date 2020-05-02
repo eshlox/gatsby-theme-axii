@@ -23,7 +23,7 @@ import {
   th,
   thead,
   tr,
-  ul
+  ul,
 } from "./Elements";
 
 const MDXComponents: Components = {
@@ -50,7 +50,7 @@ const MDXComponents: Components = {
   ul,
   ol,
   li,
-  iframe
+  iframe,
 };
 
 export default MDXComponents;
