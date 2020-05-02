@@ -3,7 +3,7 @@ require("dotenv").config();
 const options = {
   contentPosts: "content/posts",
   siteMetadata: {
-    siteUrl: `https://gatsby-theme-axii.netlify.com`,
+    siteUrl: `https://gatsby-theme-axii.netlify.app`,
     siteTitle: `Homepage`,
     siteDescription: `Very simple blog theme.`,
     author: {
@@ -12,7 +12,7 @@ const options = {
       firstName: "AXII",
       lastName: "A Gatsby theme",
       email: `eshlox@vertolabs.com`,
-      site: "gatsby-theme-axii.netlify.com",
+      site: "gatsby-theme-axii.netlify.app",
       gender: "male",
     },
     social: {

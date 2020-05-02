@@ -9,7 +9,7 @@
 
 ## Demo
 
-- https://gatsby-theme-axii.netlify.com
+- https://gatsby-theme-axii.netlify.app
 - https://eshlox.net
 
 ## Features

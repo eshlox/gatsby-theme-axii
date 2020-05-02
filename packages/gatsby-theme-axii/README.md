@@ -9,7 +9,7 @@
 
 ## Demo
 
-- https://gatsby-theme-axii.netlify.com
+- https://gatsby-theme-axii.netlify.app
 - https://eshlox.net
 
 ## Features
@@ -88,7 +88,7 @@ const options = {
   // The site configuration
   siteMetadata: {
     // The site URL
-    siteUrl: `https://gatsby-theme-axii.netlify.com`,
+    siteUrl: `https://gatsby-theme-axii.netlify.app`,
     // The index page title
     siteTitle: `Homepage`,
     // The site description
@@ -99,7 +99,7 @@ const options = {
       // Author name. It's added to each page title.
       name: `Foo Bar`,
       email: `email@example.com`,
-      site: `gatsby-theme-axii.netlify.com`,
+      site: `gatsby-theme-axii.netlify.app`,
     },
     // Social accounts. Remove to disable.
     social: {
