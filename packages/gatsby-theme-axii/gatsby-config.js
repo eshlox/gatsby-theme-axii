@@ -206,7 +206,14 @@ module.exports = (options) => {
     siteMetadata,
     plugins: [
       `gatsby-image`,
-      `gatsby-plugin-material-ui`,
+      {
+        resolve: `gatsby-plugin-material-ui`,
+        options: {
+          stylesProvider: {
+            injectFirst: true,
+          },
+        },
+      },
       `gatsby-plugin-remove-trailing-slashes`,
       `gatsby-plugin-twitter`,
       `gatsby-plugin-typescript`,
