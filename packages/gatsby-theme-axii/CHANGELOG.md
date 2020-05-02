@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.8.0...@eshlox/gatsby-theme-axii@0.9.0) (2020-05-02)
+
+
+### Bug Fixes
+
+* **footer:** fix styles ([f5e6f8e](https://github.com/eshlox/gatsby-theme-axii/commit/f5e6f8eaf4c1bbb554b67669270644ca8eefd2ea))
+
+
+### Features
+
+* **theme:** improved layout, seo, eslint and many more changes ([087add0](https://github.com/eshlox/gatsby-theme-axii/commit/087add082e30b5ded161890ec9b1afe0aa56cc0c))
+
+
+
+
+
 # [0.8.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.7.5...@eshlox/gatsby-theme-axii@0.8.0) (2020-04-25)
 
 
