@@ -1,7 +1,7 @@
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { ThemeProvider } from "@material-ui/core/styles";
+import { Theme, ThemeProvider } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { MDXProvider } from "@mdx-js/react";
 import React from "react";
@@ -15,11 +15,11 @@ import useStyles from "./styles";
 const Layout: React.FC = ({ children }) => {
   const classes = useStyles();
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  let theme: Theme = prefersDarkMode ? darkTheme : lightTheme;
 
-  const theme = React.useMemo(
-    () => (prefersDarkMode ? darkTheme : lightTheme),
-    [prefersDarkMode]
-  );
+  React.useEffect(() => {
+    theme = prefersDarkMode ? darkTheme : lightTheme;
+  }, [prefersDarkMode]);
 
   return (
     <ThemeProvider theme={theme}>
