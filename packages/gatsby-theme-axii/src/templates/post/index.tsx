@@ -2,6 +2,7 @@ import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import clsx from "clsx";
 import Disqus from "disqus-react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -46,6 +47,7 @@ export const pageQuery = graphql`
 const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
   const classes = useStyles();
   const markdownClasses = useMarkdownStyles();
+  const className = clsx(classes, markdownClasses);
   const [disqusDisplayed, setDisqusDisplayed] = useState(false);
   const pageUrl = `${site.siteMetadata.siteUrl + article.slug}`;
 
@@ -79,7 +81,7 @@ const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
         </Typography>
       </Box>
 
-      <Box className={`${classes.body} ${markdownClasses.markdown}`}>
+      <Box className={className}>
         <MDXRenderer>{article.body}</MDXRenderer>
       </Box>
 

@@ -1,4 +1,5 @@
 import Box from "@material-ui/core/Box";
+import clsx from "clsx";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/vsDark";
 import React from "react";
@@ -21,7 +22,7 @@ const code: React.FC<{ className?: string }> = (props) => {
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <Box
           component="pre"
-          className={`${className} ${classes.root}`}
+          className={clsx(className, classes.root)}
           style={{ ...style }}
         >
           {tokens.map((line, i) => (

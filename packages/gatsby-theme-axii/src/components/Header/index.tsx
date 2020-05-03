@@ -5,6 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import HomeIcon from "@material-ui/icons/Home";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import clsx from "clsx";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import HeaderQuery from "./interfaces";
@@ -27,12 +28,10 @@ const query = graphql`
 const Header: React.FC<{ className: string }> = (props) => {
   const classes = useStyles();
   const data: HeaderQuery = useStaticQuery(query);
+  const className = clsx(props.className, classes.appBar);
 
   return (
-    <AppBar
-      position="static"
-      className={`${classes.appBar} ${props.className}`}
-    >
+    <AppBar position="static" className={className}>
       <Toolbar>
         <IconButton
           edge="start"

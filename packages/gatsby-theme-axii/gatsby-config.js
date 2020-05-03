@@ -4,6 +4,13 @@ const queries = require("./src/utils/algolia");
 module.exports = (options) => {
   const { siteMetadata } = options;
 
+  const layout = {
+    resolve: `gatsby-plugin-layout`,
+    options: {
+      component: require.resolve(`./src/layout/index.tsx`),
+    },
+  };
+
   const manifest = {
     resolve: `gatsby-plugin-manifest`,
     options: {
@@ -206,6 +213,7 @@ module.exports = (options) => {
     siteMetadata,
     plugins: [
       `gatsby-image`,
+      layout, // it has to be before gatsby-plugin-material-ui
       `gatsby-plugin-material-ui`,
       `gatsby-plugin-remove-trailing-slashes`,
       `gatsby-plugin-twitter`,

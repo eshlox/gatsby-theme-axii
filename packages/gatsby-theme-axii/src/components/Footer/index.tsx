@@ -6,6 +6,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import RssFeedIcon from "@material-ui/icons/RssFeed";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import clsx from "clsx";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import FooterProps from "./interfaces";
@@ -46,6 +47,7 @@ const Footer: React.FC<{ className: string }> = (props: {
   const mailto = (email: string): string => `mailto:${email}`;
 
   const { className, ...rest } = props;
+  const rootClassName = clsx(className, classes.root);
 
   const data: FooterProps = useStaticQuery(query);
   const {
@@ -58,12 +60,7 @@ const Footer: React.FC<{ className: string }> = (props: {
   } = data;
 
   return (
-    <Grid
-      container
-      component="footer"
-      className={`${classes.root} ${className}`}
-      {...rest}
-    >
+    <Grid container component="footer" className={rootClassName} {...rest}>
       <Grid item sm={12} md={6} className={classes.copyright}>
         &copy; {currentYear()} {name}
       </Grid>
