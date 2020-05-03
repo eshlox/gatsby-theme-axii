@@ -5,7 +5,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { MDXProvider } from "@mdx-js/react";
 import React from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MDXComponents from "../components/MDXComponents";
@@ -22,7 +22,7 @@ const Layout: React.FC = ({ children }) => {
   );
 
   return (
-    <HelmetProvider>
+    <ThemeProvider theme={theme}>
       <Helmet>
         <link
           rel="stylesheet"
@@ -33,17 +33,15 @@ const Layout: React.FC = ({ children }) => {
           content={prefersDarkMode ? "dark" : "light"}
         />
       </Helmet>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Box className={classes.root}>
-          <Header className={classes.header} />
-          <Container component="main" className={classes.main} maxWidth="md">
-            <MDXProvider components={MDXComponents}>{children}</MDXProvider>
-          </Container>
-          <Footer className={classes.footer} />
-        </Box>
-      </ThemeProvider>
-    </HelmetProvider>
+      <CssBaseline />
+      <Box className={classes.root}>
+        <Header className={classes.header} />
+        <Container component="main" className={classes.main} maxWidth="md">
+          <MDXProvider components={MDXComponents}>{children}</MDXProvider>
+        </Container>
+        <Footer className={classes.footer} />
+      </Box>
+    </ThemeProvider>
   );
 };
 
