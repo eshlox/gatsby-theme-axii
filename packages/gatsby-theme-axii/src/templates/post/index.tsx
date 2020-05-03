@@ -47,7 +47,7 @@ export const pageQuery = graphql`
 const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
   const classes = useStyles();
   const markdownClasses = useMarkdownStyles();
-  const className = clsx(classes, markdownClasses);
+  const className = clsx(markdownClasses.markdown, classes.body);
   const [disqusDisplayed, setDisqusDisplayed] = useState(false);
   const pageUrl = `${site.siteMetadata.siteUrl + article.slug}`;
 
