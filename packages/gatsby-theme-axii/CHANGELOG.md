@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.9.1...@eshlox/gatsby-theme-axii@0.10.0) (2020-05-04)
+
+
+### Features
+
+* **seo:** different og image for article ([d01b261](https://github.com/eshlox/gatsby-theme-axii/commit/d01b26102b7fc8feca52399b74d7cf325fd1b3ca))
+
+
+
+
+
 ## [0.9.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.9.0...@eshlox/gatsby-theme-axii@0.9.1) (2020-05-04)
 
 
