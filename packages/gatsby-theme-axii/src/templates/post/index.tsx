@@ -71,6 +71,13 @@ const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
             publishedTime: article.date,
             section: article.categories[0],
           },
+          images: [
+            {
+              url: `${site.siteMetadata.siteUrl}/og-article.png`,
+              width: 1200,
+              height: 630,
+            },
+          ],
         }}
       />
 

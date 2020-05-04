@@ -81,7 +81,7 @@ module.exports = (options) => {
         url: siteMetadata.siteUrl,
         images: [
           {
-            url: `${siteMetadata.siteUrl}/og.jpg`,
+            url: `${siteMetadata.siteUrl}/og-default.png`,
             width: 1200,
             height: 630,
           },
