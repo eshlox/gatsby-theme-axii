@@ -221,6 +221,7 @@ module.exports = (options) => {
       `gatsby-plugin-robots-txt`,
       `gatsby-plugin-sharp`,
       `gatsby-remark-copy-linked-files`,
+      `gatsby-remark-images`,
       `gatsby-transformer-sharp`,
       seo,
       sitemap,
