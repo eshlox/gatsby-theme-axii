@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.9.0...@eshlox/gatsby-theme-axii@0.9.1) (2020-05-04)
+
+
+### Bug Fixes
+
+* **markdown:** fix post markdown styles ([4e7e9e0](https://github.com/eshlox/gatsby-theme-axii/commit/4e7e9e07eef74aee4d585d44f29953bcdddd08a7))
+* **mdx:** add gatsby-remark-images to gatsby plugins ([94eb57e](https://github.com/eshlox/gatsby-theme-axii/commit/94eb57e58671903894537a0519a761b478e2190f))
+* **netlify:** update domain ([762e5b8](https://github.com/eshlox/gatsby-theme-axii/commit/762e5b8f42a84266cc15444c73b79b2d7c9f2e59))
+* **seo:** fix og image path ([2ad2b81](https://github.com/eshlox/gatsby-theme-axii/commit/2ad2b8198633877868edda116b6a449b81fdb20c))
+* **seo:** remove duplicate helmetprovider ([03c43ac](https://github.com/eshlox/gatsby-theme-axii/commit/03c43ac52aac994472311072cd2203489c3c4caa))
+* **ssr:** use gatsby-plugin-layout to fix ssr and material-ui issues ([1264b74](https://github.com/eshlox/gatsby-theme-axii/commit/1264b74ecc83b9f9a94e385ff1b326cddba3a9ae))
+
+
+
+
+
 # [0.9.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.8.0...@eshlox/gatsby-theme-axii@0.9.0) (2020-05-02)
 
 

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.8.0...site@0.8.1) (2020-05-04)
+
+
+### Bug Fixes
+
+* **netlify:** update domain ([762e5b8](https://github.com/eshlox/gatsby-theme-axii/commit/762e5b8f42a84266cc15444c73b79b2d7c9f2e59))
+* **seo:** fix og image path ([2ad2b81](https://github.com/eshlox/gatsby-theme-axii/commit/2ad2b8198633877868edda116b6a449b81fdb20c))
+* **ssr:** use gatsby-plugin-layout to fix ssr and material-ui issues ([1264b74](https://github.com/eshlox/gatsby-theme-axii/commit/1264b74ecc83b9f9a94e385ff1b326cddba3a9ae))
+
+
+
+
+
 # [0.8.0](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.7.6...site@0.8.0) (2020-05-02)
 
 
