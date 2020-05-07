@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.10.0...@eshlox/gatsby-theme-axii@0.10.1) (2020-05-07)
+
+
+### Bug Fixes
+
+* **header:** increase padding between elements ([a088245](https://github.com/eshlox/gatsby-theme-axii/commit/a08824578c30476ad535697e64116ffe965d0440))
+* **layout:** fix page width on mobile ([4e6c47b](https://github.com/eshlox/gatsby-theme-axii/commit/4e6c47b4bfbea9f2f04465ec30850fd5d794009f))
+
+
+
+
+
 # [0.10.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.9.1...@eshlox/gatsby-theme-axii@0.10.0) (2020-05-04)
 
 
