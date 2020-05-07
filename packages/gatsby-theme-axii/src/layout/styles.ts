@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   main: {
     gridArea: "content",
+    width: "100vw",
   },
   footer: {
     gridArea: "footer",
