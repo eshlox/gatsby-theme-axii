@@ -1,4 +1,5 @@
-const ISO6391 = require("iso-639-1");
+const chunk = require("chunk-text");
+const iso6391 = require("iso-639-1");
 const slugify = require("slugify");
 
 const postQuery = `{
@@ -12,34 +13,42 @@ const postQuery = `{
           tags
           categories
           language
+          excerpt(pruneLength: 1000000)
         }
       }
     }
   }`;
 
-const format = arr =>
-  arr.map(post => {
-    const postData = post.node;
+const format = (arr) =>
+  arr.map((post) => {
+    const { excerpt, ...postData } = post.node;
 
-    postData.language = ISO6391.getName(postData.language);
+    postData.language = iso6391.getName(postData.language);
 
     if (postData.categories) {
-      postData.categories = postData.categories.map(category =>
+      postData.categories = postData.categories.map((category) =>
         slugify(category).toUpperCase()
       );
     }
+
     if (postData.tags) {
-      postData.tags = postData.tags.map(tag => slugify(tag).toLowerCase());
+      postData.tags = postData.tags.map((tag) => slugify(tag).toLowerCase());
     }
 
-    return postData;
+    const chunks = chunk(excerpt, 500).map((excerptChunk, index) => ({
+      ...postData,
+      objectID: `${postData.objectID}-${index}`,
+      content: excerptChunk,
+    }));
+
+    return chunks;
   });
 
 const settings = {
   distinct: true,
   attributeForDistinct: "slug",
   attributesForFaceting: ["language", "tags", "categories"],
-  searchableAttributes: ["title", "tags", "categories", "slug"],
+  searchableAttributes: ["title", "content", "tags", "categories", "slug"],
   ranking: [
     "desc(date)",
     "typo",
@@ -48,18 +57,18 @@ const settings = {
     "filters",
     "proximity",
     "attribute",
-    "exact"
+    "exact",
   ],
-  customRanking: ["asc(title)"]
+  customRanking: ["asc(title)"],
 };
 
 const queries = [
   {
     query: postQuery,
-    transformer: ({ data }) => format(data.allArticle.edges),
+    transformer: ({ data }) => format(data.allArticle.edges).flat(),
     indexName: `Posts`,
-    settings
-  }
+    settings,
+  },
 ];
 
 module.exports = queries;

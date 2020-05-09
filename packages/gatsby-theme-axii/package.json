@@ -32,6 +32,7 @@
     "@mdx-js/mdx": "^1.6.1",
     "@mdx-js/react": "^1.6.1",
     "algoliasearch": "^4.2.0",
+    "chunk-text": "^1.0.5",
     "dayjs": "^1.8.26",
     "disqus-react": "^1.0.8",
     "dotenv": "^8.2.0",
