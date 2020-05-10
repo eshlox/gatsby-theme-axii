@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.10.1...@eshlox/gatsby-theme-axii@0.11.0) (2020-05-10)
+
+
+### Features
+
+* **algolia:** index the entire article body ([71a19e4](https://github.com/eshlox/gatsby-theme-axii/commit/71a19e436b6dd7c0242422e433ea7558055b612b)), closes [#1](https://github.com/eshlox/gatsby-theme-axii/issues/1)
+
+
+
+
+
 ## [0.10.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.10.0...@eshlox/gatsby-theme-axii@0.10.1) (2020-05-07)
 
 
