@@ -8,9 +8,9 @@ const options = {
     siteDescription: `Very simple blog theme.`,
     author: {
       nickname: `eshlox`,
-      name: `AXII - A Gatsby theme`,
+      name: `AXII - A Gatsby blog theme`,
       firstName: "AXII",
-      lastName: "A Gatsby theme",
+      lastName: "A Gatsby blog theme",
       email: `eshlox@vertolabs.com`,
       site: "gatsby-theme-axii.netlify.app",
       gender: "male",

@@ -1,11 +1,8 @@
-<p align="center">
-  <img width="500" height="500" src="https://raw.githubusercontent.com/eshlox/gatsby-theme-axii/master/packages/site/content/images/avatar.png" />
-</p>
+![AXII - A Gatsby blog theme](./packages/site/static/og-default.png "AXII - A Gatsby blog theme")
 
 # AXII - A Gatsby blog theme
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e7989bb9-c63c-4670-9136-ebe5545459ed/deploy-status)](https://app.netlify.com/sites/gatsby-theme-axii/deploys)
-[![npm version](https://badge.fury.io/js/%40eshlox%2Fgatsby-theme-axii.svg)](https://badge.fury.io/js/%40eshlox%2Fgatsby-theme-axii)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e7989bb9-c63c-4670-9136-ebe5545459ed/deploy-status)](https://app.netlify.com/sites/gatsby-theme-axii/deploys) ![NPM Licence](https://img.shields.io/npm/l/@eshlox/gatsby-theme-axii) ![npm](https://img.shields.io/npm/v/@eshlox/gatsby-theme-axii)
 
 ## Demo
 
@@ -14,11 +11,17 @@
 
 ## Features
 
-- Material UI
 - Markdown/MDX support
+- Material UI
+- Code syntax highlighter
+- Responsive images
 - Aloglia search
 - Light/Dark mode
-- SEO, RSS, sitemap
+- SEO
+- RSS
+- Sitemap
+- Sentry support
+- Twitter & Youtube embeds support
 
 ## Theme documentation
 
@@ -31,7 +34,7 @@ This repository uses [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspac
 ### Install all dependencies
 
 ```sh
-lerna bootstrap
+npx lerna bootstrap
 ```
 
 ### Run the development server
@@ -40,15 +43,21 @@ lerna bootstrap
 yarn workspace site develop
 ```
 
+### Build the website
+
+```sh
+yarn workspace site build
+```
+
 ### Publish packages to NPM
 
 ```sh
-lerna publish
+HUSKY_SKIP_HOOKS=1 GH_TOKEN=GITHUB-TOKEN lerna publish
 ```
 
-### Yarn
+## Yarn
 
-## Add package
+### Add a package
 
 ```sh
 yarn workspace @eshlox/gatsby-theme-axii add packageName

@@ -53,7 +53,7 @@ module.exports = (options) => {
             linkImagesToOriginal: true,
             withWebp: true,
             showCaptions: false,
-            disableBgImageOnAlpha: true,
+            backgroundColor: "transparent",
           },
         },
         {

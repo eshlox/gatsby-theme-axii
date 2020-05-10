@@ -1,11 +1,8 @@
-<p align="center">
-  <img width="500" height="500" src="https://raw.githubusercontent.com/eshlox/gatsby-theme-axii/master/packages/site/content/images/avatar.png" />
-</p>
+![AXII - A Gatsby blog theme](../site/static/og-default.png "AXII - A Gatsby blog theme")
 
 # AXII - A Gatsby blog theme
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e7989bb9-c63c-4670-9136-ebe5545459ed/deploy-status)](https://app.netlify.com/sites/gatsby-theme-axii/deploys)
-[![npm version](https://badge.fury.io/js/%40eshlox%2Fgatsby-theme-axii.svg)](https://badge.fury.io/js/%40eshlox%2Fgatsby-theme-axii)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e7989bb9-c63c-4670-9136-ebe5545459ed/deploy-status)](https://app.netlify.com/sites/gatsby-theme-axii/deploys) ![NPM Licence](https://img.shields.io/npm/l/@eshlox/gatsby-theme-axii) ![npm](https://img.shields.io/npm/v/@eshlox/gatsby-theme-axii)
 
 ## Demo
 
@@ -14,11 +11,17 @@
 
 ## Features
 
-- Material UI
 - Markdown/MDX support
+- Material UI
+- Code syntax highlighter
+- Responsive images
 - Aloglia search
 - Light/Dark mode
-- SEO, RSS, sitemap
+- SEO
+- RSS
+- Sitemap
+- Sentry support
+- Twitter & Youtube embeds support
 
 ## Example site - source code
 
@@ -35,7 +38,7 @@ You can find the example site code in [packages/site](https://github.com/eshlox/
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "build": "AWS_LAMBDA_FUNCTION_NAME=puppeteer gatsby build",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean"
   }
@@ -48,10 +51,13 @@ You can find the example site code in [packages/site](https://github.com/eshlox/
 npm install gatsby @eshlox/gatsby-theme-axii
 ```
 
-3. Create an Algolia app with two API keys.
+3. Create an Algolia application and configure three API keys.
 
-- search API key - it requires `search` ACL, it should use `Posts` index and should have correct `HTTP Referers`
-- admin API key - it requires the following ACLs: `addObject`, `deleteObject` `editSettings` and `settings` and access to two indices: `Posts` and `Posts_tmp`.
+- admin API key for indexing
+- search API key
+- search API key for dev environment
+
+![Algolia - API keys](./docs/algolia-keys.png "Algolia - API keys")
 
 4. Create `.env` file to provide Algolia credentials.
 
@@ -62,19 +68,7 @@ ALGOLIA_SEARCH_API_KEY=SEARCH-API-KEY
 ALGOLIA_INDEX_NAME=Posts
 ```
 
-5. Run the development server.
-
-```sh
-npm run develop
-```
-
-6. Build the site.
-
-```sh
-npm run build
-```
-
-## Configuration
+5. Configuration.
 
 Create a `gatsby-config.js` file, use the configuration below and modify it to your needs.
 
@@ -98,8 +92,11 @@ const options = {
       nickname: `eshlox`,
       // Author name. It's added to each page title.
       name: `Foo Bar`,
+      firstName: "AXII",
+      lastName: "A Gatsby theme",
       email: `email@example.com`,
       site: `gatsby-theme-axii.netlify.app`,
+      gender: "male",
     },
     // Social accounts. Remove to disable.
     social: {
@@ -165,58 +162,53 @@ module.exports = {
 };
 ```
 
+6. Run the development server.
+
+```sh
+npm run develop
+```
+
+7. Build the site.
+
+```sh
+npm run build
+```
+
 ### Index page
 
 To build the index page, create an `index.mdx` file in `content/pages` directory. It supports MDX so you can import and use all components. Components from [src/components](https://github.com/eshlox/gatsby-theme-axii/tree/master/packages/gatsby-theme-axii/src/components) are available automatically. Example:
 
 ```mdx
-import Seo from "@eshlox/gatsby-theme-axii/src/components/SEO";
-import Avatar from "@eshlox/gatsby-theme-axii/src/components/Avatar";
-import NewReleasesIcon from "@material-ui/icons/NewReleases";
-import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import { GatsbySeo } from "gatsby-plugin-next-seo";
 
-<Seo />
-<Grid container direction="column" justify="center" alignItems="center">
-  <Grid item xs={12}>
-    <Typography variant="h1" component="h1" align="center" gutterBottom>
-      AXII
-    </Typography>
-  </Grid>
-  <Grid item xs={12}>
-    <Avatar />
-  </Grid>
-  <Grid item xs={12}>
-    <Typography variant="h2" component="h2" align="center" gutterBottom>
-      A Gatsby blog theme.
-    </Typography>
-  </Grid>
-</Grid>
+<GatsbySeo title="Homepage" />
+
+<Typography variant="h1" component="h1" align="center">
+  Greetings!
+</Typography>
+
+# AXII
+
+![AXII logo](./images/avatar.png "AXII logo")
+
+## A Gatsby blog theme.
 
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet venenatis risus ac malesuada. Sed accumsan tellus libero, porttitor aliquam neque consequat aliquet. Nulla massa libero, ultricies ut sapien ac, sollicitudin pretium felis. Quisque non tellus fringilla, tempus sapien nec, vulputate nulla. Vivamus eleifend fringilla felis, ac facilisis nunc congue in. Nullam ac aliquam neque. Nam egestas molestie venenatis. Vivamus vitae ipsum in sem dapibus sodales vitae nec arcu.
-
-Aliquam sed malesuada purus, vel mattis libero.
-
-[eshlox.net](https://eshlox.net)
-
-#### <NewReleasesIcon /> Etiam lobortis elementum dui eleifend convallis
-
-Proin fermentum massa vel dignissim molestie. Fusce sollicitudin viverra aliquam. Nulla porttitor nec odio vel sollicitudin. Proin quam urna, pharetra quis facilisis quis, laoreet eu dolor. Donec luctus, neque porta gravida imperdiet, ipsum nisi tincidunt tortor, vel ullamcorper neque leo id nulla. Proin nec mauris eu lectus tempor faucibus ut in dolor. Etiam lobortis elementum dui eleifend convallis. Praesent nulla elit, blandit ac odio non, pulvinar ultricies nisi.
-
----
-
-> Phasellus varius felis dictum, cursus nisi ac, tristique enim. Vestibulum fringilla non leo nec rutrum. Vestibulum nec venenatis lacus, nec efficitur eros. Maecenas porttitor varius odio sed volutpat.
-
----
-
-![Photo by Amanda Kerr on Unsplash](./images/amanda-kerr-jpMyAqHat7g-unsplash.jpg "Photo by Amanda Kerr on Unsplash")
 ```
 
-### Avatar and site favicon.
+### Open Graph images
 
-Add `avatar.png` and `icon.png` (favicon) files to the `content/images` directory.
+| File                    | Description               |
+| ----------------------- | ------------------------- |
+| `static/og-default.png` | Image for `/` and `/blog` |
+| `static/og-article.png` | Image for all blog posts  |
+
+### Site favicon.
+
+Add `icon.png` (favicon) file to the `content/images` directory.
 
 ### Blog posts
 
