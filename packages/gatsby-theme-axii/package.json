@@ -69,7 +69,7 @@
     "slugify": "^1.4.0"
   },
   "devDependencies": {
-    "@types/react": "^16.9.34",
+    "@types/react": "^16.9.35",
     "@types/react-instantsearch-dom": "^6.3.0"
   }
 }
