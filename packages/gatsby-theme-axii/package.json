@@ -46,7 +46,7 @@
     "gatsby-plugin-material-ui": "^2.1.8",
     "gatsby-plugin-mdx": "^1.2.7",
     "gatsby-plugin-next-seo": "^1.5.0",
-    "gatsby-plugin-page-creator": "^2.3.0",
+    "gatsby-plugin-page-creator": "^2.3.2",
     "gatsby-plugin-remove-trailing-slashes": "^2.3.0",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sentry": "^1.0.1",
