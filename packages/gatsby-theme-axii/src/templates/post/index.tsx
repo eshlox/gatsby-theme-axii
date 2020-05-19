@@ -100,6 +100,7 @@ const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
           startIcon={<TwitterIcon />}
           href={`https://mobile.twitter.com/search?q=${disqusConfig.url}`}
           target="_blank"
+          rel="noreferrer"
           fullWidth
         >
           comment on twitter

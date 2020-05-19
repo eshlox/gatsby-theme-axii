@@ -28,6 +28,7 @@ const Support: React.FC<{ className: string }> = (props) => {
       className={props.className}
       href={data.site.siteMetadata.support.buymeacoffee.url}
       target="_blank"
+      rel="noreferrer"
       fullWidth
       startIcon={
         <SvgIcon>
