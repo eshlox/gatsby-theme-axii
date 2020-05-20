@@ -1,8 +1,9 @@
+import Box from "@material-ui/core/Box";
+import Button from "@material-ui/core/Button";
 import Collapse from "@material-ui/core/Collapse";
-import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import algoliasearch from "algoliasearch/lite";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import {
   Configure,
@@ -61,7 +62,7 @@ const Search = () => {
   const searchClient = algoliasearch(applicationId, searchApiKey);
 
   return (
-    <Container>
+    <Box>
       <InstantSearch searchClient={searchClient} indexName="Posts">
         <Configure hitsPerPage={10} distinct />
         <Grid container spacing={2}>
@@ -99,9 +100,19 @@ const Search = () => {
 
         <CustomInfiniteHits />
 
+        <Button
+          size="large"
+          component={Link}
+          to="/blog/all"
+          className={classes.allArticlesButton}
+          fullWidth
+        >
+          all articles
+        </Button>
+
         <PoweredBy />
       </InstantSearch>
-    </Container>
+    </Box>
   );
 };
 
