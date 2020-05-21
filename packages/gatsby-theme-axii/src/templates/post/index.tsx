@@ -10,21 +10,31 @@ import { GatsbySeo } from "gatsby-plugin-next-seo";
 import React, { useState } from "react";
 import Support from "../../components/SupportButton";
 import useMarkdownStyles from "../../styles/markdown";
-import PostPageProps from "./interfaces";
+import { Article, PostPageProps } from "./interfaces";
 import useStyles from "./styles";
+import { formatDate } from "./utils";
 
 export const pageQuery = graphql`
   query BlogPostQuery($slug: String) {
     article(slug: { eq: $slug }) {
       slug
       title
-      date(formatString: "MMMM Do, YYYY")
+      date(formatString: "YYYY-MM-DD")
       language
       comments
       body
       tags
       categories
       excerpt(pruneLength: 200)
+      parent {
+        parent {
+          ... on File {
+            fields {
+              gitLogLatestDate(formatString: "YYYY-MM-DD")
+            }
+          }
+        }
+      }
     }
     site {
       siteMetadata {
@@ -44,7 +54,9 @@ export const pageQuery = graphql`
   }
 `;
 
-const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
+const PostTemplate: React.FC<PostPageProps> = ({
+  data: { article, site },
+}: PostPageProps) => {
   const classes = useStyles();
   const markdownClasses = useMarkdownStyles();
   const className = clsx(markdownClasses.markdown, classes.body);
@@ -55,6 +67,10 @@ const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
     identifier: article.slug,
     title: article.title,
     url: pageUrl,
+  };
+
+  const shouldDisplayModifiedDate = (article: Article): boolean => {
+    return article.parent.parent.fields.gitLogLatestDate !== article.date;
   };
 
   return (
@@ -69,6 +85,7 @@ const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
           article: {
             tags: article.tags,
             publishedTime: article.date,
+            modifiedTime: article.parent.parent.fields.gitLogLatestDate,
             section: article.categories[0],
           },
           images: [
@@ -82,7 +99,12 @@ const PostTemplate = ({ data: { article, site } }: PostPageProps) => {
       />
 
       <Box className={classes.header}>
-        <Typography>{article.date}</Typography>
+        <Typography title="published">{formatDate(article.date)}</Typography>
+        {shouldDisplayModifiedDate(article) && (
+          <Typography title="updated" variant="body2" color="textSecondary">
+            {formatDate(article.parent.parent.fields.gitLogLatestDate)}
+          </Typography>
+        )}
         <Typography variant="h1" component="h1">
           {article.title}
         </Typography>
