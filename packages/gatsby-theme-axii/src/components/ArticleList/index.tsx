@@ -6,7 +6,7 @@ import useAllArticlesStyles from "./styles";
 
 const query = graphql`
   {
-    allArticle {
+    allArticle(sort: { order: DESC, fields: date }) {
       edges {
         node {
           objectID: id
