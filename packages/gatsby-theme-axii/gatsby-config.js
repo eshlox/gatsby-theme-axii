@@ -32,6 +32,7 @@ module.exports = (options) => {
       indexName: siteMetadata.search.algolia.posts.indexName,
       queries,
       chunkSize: 10000, // default: 1000
+      enablePartialUpdates: true,
     },
   };
 
@@ -209,6 +210,13 @@ module.exports = (options) => {
     },
   };
 
+  const gitinfo = {
+    resolve: `gatsby-transformer-gitinfo`,
+    options: {
+      include: /\.mdx$/i,
+    },
+  };
+
   return {
     siteMetadata,
     plugins: [
@@ -223,6 +231,7 @@ module.exports = (options) => {
       `gatsby-remark-copy-linked-files`,
       `gatsby-remark-images`,
       `gatsby-transformer-sharp`,
+      gitinfo,
       seo,
       sitemap,
       manifest,

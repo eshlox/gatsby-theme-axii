@@ -14,6 +14,15 @@ const postQuery = `{
           categories
           language
           excerpt(pruneLength: 1000000)
+          parent {
+            parent {
+              ... on File {
+                fields {
+                  gitLogLatestDate(formatString: "YYYY-MM-DD")
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -21,7 +30,7 @@ const postQuery = `{
 
 const format = (arr) =>
   arr.map((post) => {
-    const { excerpt, ...postData } = post.node;
+    const { excerpt, parent, ...postData } = post.node;
 
     postData.language = iso6391.getName(postData.language);
 
@@ -34,6 +43,8 @@ const format = (arr) =>
     if (postData.tags) {
       postData.tags = postData.tags.map((tag) => slugify(tag).toLowerCase());
     }
+
+    postData.modified = parent.parent.fields.gitLogLatestDate;
 
     const chunks = chunk(excerpt, 500).map((excerptChunk, index) => ({
       ...postData,
