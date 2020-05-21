@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.11.0...@eshlox/gatsby-theme-axii@0.12.0) (2020-05-21)
+
+
+### Bug Fixes
+
+* **blog:** article list as mdx page ([7a8085b](https://github.com/eshlox/gatsby-theme-axii/commit/7a8085b8cafcf5fd565ceb0e3a3a81c02f6c94ec))
+* **links:** add noreferrer to buttons ([709c50a](https://github.com/eshlox/gatsby-theme-axii/commit/709c50ae0b6f7f0a101c8e024f6ab690f9124dab))
+
+
+### Features
+
+* **blog:** page with a list of all articles ([7bd5bfe](https://github.com/eshlox/gatsby-theme-axii/commit/7bd5bfe9a64555b899dacd0f191f9233f82c3e0c)), closes [#73](https://github.com/eshlox/gatsby-theme-axii/issues/73)
+
+
+
+
+
 # [0.11.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.10.1...@eshlox/gatsby-theme-axii@0.11.0) (2020-05-10)
 
 
