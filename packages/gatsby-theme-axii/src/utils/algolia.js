@@ -44,7 +44,9 @@ const format = (arr) =>
       postData.tags = postData.tags.map((tag) => slugify(tag).toLowerCase());
     }
 
-    postData.modified = parent.parent.fields.gitLogLatestDate;
+    postData.modified = parent.parent.fields
+      ? parent.parent.fields.gitLogLatestDate
+      : postData.date;
 
     const chunks = chunk(excerpt, 500).map((excerptChunk, index) => ({
       ...postData,

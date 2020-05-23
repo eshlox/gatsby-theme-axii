@@ -12,7 +12,7 @@ export interface Article {
     parent: {
       fields: {
         gitLogLatestDate: string;
-      };
+      } | null;
     };
   };
 }

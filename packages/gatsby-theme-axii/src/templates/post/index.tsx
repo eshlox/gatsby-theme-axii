@@ -10,7 +10,7 @@ import { GatsbySeo } from "gatsby-plugin-next-seo";
 import React, { useState } from "react";
 import Support from "../../components/SupportButton";
 import useMarkdownStyles from "../../styles/markdown";
-import { Article, PostPageProps } from "./interfaces";
+import { PostPageProps } from "./interfaces";
 import useStyles from "./styles";
 import { formatDate } from "./utils";
 
@@ -63,14 +63,13 @@ const PostTemplate: React.FC<PostPageProps> = ({
   const [disqusDisplayed, setDisqusDisplayed] = useState(false);
   const pageUrl = `${site.siteMetadata.siteUrl + article.slug}`;
 
+  const publishedTime = article.date;
+  const modifiedTime = article.parent.parent.fields?.gitLogLatestDate;
+
   const disqusConfig = {
     identifier: article.slug,
     title: article.title,
     url: pageUrl,
-  };
-
-  const shouldDisplayModifiedDate = (article: Article): boolean => {
-    return article.parent.parent.fields.gitLogLatestDate !== article.date;
   };
 
   return (
@@ -84,8 +83,8 @@ const PostTemplate: React.FC<PostPageProps> = ({
           type: "article",
           article: {
             tags: article.tags,
-            publishedTime: article.date,
-            modifiedTime: article.parent.parent.fields.gitLogLatestDate,
+            publishedTime,
+            modifiedTime,
             section: article.categories[0],
           },
           images: [
@@ -99,10 +98,10 @@ const PostTemplate: React.FC<PostPageProps> = ({
       />
 
       <Box className={classes.header}>
-        <Typography title="published">{formatDate(article.date)}</Typography>
-        {shouldDisplayModifiedDate(article) && (
+        <Typography title="published">{formatDate(publishedTime)}</Typography>
+        {modifiedTime && publishedTime !== modifiedTime && (
           <Typography title="updated" variant="body2" color="textSecondary">
-            {formatDate(article.parent.parent.fields.gitLogLatestDate)}
+            {formatDate(modifiedTime)}
           </Typography>
         )}
         <Typography variant="h1" component="h1">
