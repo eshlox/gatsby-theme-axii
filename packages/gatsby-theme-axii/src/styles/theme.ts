@@ -1,5 +1,3 @@
-import blue from "@material-ui/core/colors/blue";
-import orange from "@material-ui/core/colors/orange";
 import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 import { ThemeOptions } from "@material-ui/core/styles/createMuiTheme";
 
@@ -15,8 +13,12 @@ const baseTheme: ThemeOptions = {
     h6: { fontSize: "1.125rem", fontWeight: 500 },
   },
   palette: {
-    primary: blue,
-    secondary: orange,
+    primary: {
+      main: "#1976d2",
+    },
+    secondary: {
+      main: "#f57c00",
+    },
   },
 };
 
