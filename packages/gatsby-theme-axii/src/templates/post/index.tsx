@@ -115,6 +115,8 @@ const PostTemplate: React.FC<PostPageProps> = ({
       </Box>
 
       <Box>
+        <Support className={classes.support} />
+
         <Button
           variant="contained"
           color="primary"
@@ -127,8 +129,6 @@ const PostTemplate: React.FC<PostPageProps> = ({
         >
           comment on twitter
         </Button>
-
-        <Support className={classes.support} />
 
         {article.comments && !disqusDisplayed && (
           <Button
