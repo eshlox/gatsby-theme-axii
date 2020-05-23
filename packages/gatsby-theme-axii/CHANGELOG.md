@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.13.0...@eshlox/gatsby-theme-axii@0.13.1) (2020-05-23)
+
+
+### Bug Fixes
+
+* **article:** do not use article update time when it does not exist ([f719bba](https://github.com/eshlox/gatsby-theme-axii/commit/f719bba37eee7546baaba24f63a734032a29a341))
+
+
+
+
+
 # [0.13.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.12.0...@eshlox/gatsby-theme-axii@0.13.0) (2020-05-23)
 
 
