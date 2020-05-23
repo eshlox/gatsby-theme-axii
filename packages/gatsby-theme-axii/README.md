@@ -15,7 +15,7 @@
 - Material UI
 - Code syntax highlighter
 - Responsive images
-- Aloglia search
+- Aloglia search with partial updates
 - Light/Dark mode
 - SEO
 - RSS
