@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.12.0...@eshlox/gatsby-theme-axii@0.13.0) (2020-05-23)
+
+
+### Bug Fixes
+
+* **accessibility:** update colors to meet wcag standards (contrast) ([b46087a](https://github.com/eshlox/gatsby-theme-axii/commit/b46087ae64da0d05ef35f0c0e1a5e3af1f1c47ae))
+
+
+### Features
+
+* **algolia:** partial updates ([43f4745](https://github.com/eshlox/gatsby-theme-axii/commit/43f4745c4bc28da9b6aae59883e91f6c3989f992))
+* **article:** display last modified date ([18bc205](https://github.com/eshlox/gatsby-theme-axii/commit/18bc205c889129749c32b32f614b8a595f5663ce))
+
+
+
+
+
 # [0.12.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.11.0...@eshlox/gatsby-theme-axii@0.12.0) (2020-05-21)
 
 
