@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "react", "react-perf"],
+  plugins: ["@typescript-eslint", "react", "react-perf", "jsx-a11y"],
   parserOptions: {
     ecmaFeatures: {
       ecmaVersion: 2020,
@@ -25,5 +25,6 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:react/recommended",
     "plugin:react-perf/recommended",
+    "plugin:jsx-a11y/recommended",
   ],
 };
