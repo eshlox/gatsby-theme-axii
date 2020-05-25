@@ -100,7 +100,7 @@ const Footer: React.FC<{ className: string }> = (props: {
             </IconButton>
           </a>
         ) : null}
-        <a href="/rss.xml">
+        <a href="/rss/index.xml">
           <IconButton color="primary" aria-label="RSS">
             <RssFeedIcon />
           </IconButton>

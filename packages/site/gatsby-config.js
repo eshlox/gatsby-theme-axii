@@ -59,6 +59,42 @@ const options = {
         dsn: process.env.SENTRY_DSN_URL,
       },
     },
+    feeds: [
+      {
+        query: `{
+          allArticle(sort: {fields: date, order: DESC}) {
+            edges {
+              node {
+                excerpt
+                slug
+                title
+                date(formatString: "YYYY-MM-DD")
+                categories
+              }
+            }
+          }
+        }`,
+        output: "/rss/index.xml",
+        title: "AXII - A Gatsby blog theme",
+      },
+      {
+        query: `{
+          allArticle(sort: {fields: date, order: DESC}, filter: {tags: {eq: "markdown"}}) {
+            edges {
+              node {
+                excerpt
+                slug
+                title
+                date(formatString: "YYYY-MM-DD")
+                categories
+              }
+            }
+          }
+        }`,
+        output: "/rss/tags/markdown.xml",
+        title: "AXII - A Gatsby blog theme - #markdown",
+      },
+    ],
   },
 };
 

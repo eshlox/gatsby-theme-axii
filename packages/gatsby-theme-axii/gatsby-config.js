@@ -105,8 +105,7 @@ module.exports = (options) => {
   const rss = {
     resolve: `gatsby-plugin-feed`,
     options: {
-      query: `
-      {
+      query: `{
         site {
           siteMetadata {
             title: siteTitle
@@ -115,28 +114,19 @@ module.exports = (options) => {
             site_url: siteUrl
           }
         }
-      }
-    `,
+      }`,
       setup: ({
         query: {
           site: { siteMetadata },
         },
-        ...rest
       }) => {
-        siteMetadata.feed_url = siteMetadata.siteUrl + "/rss.xml";
-        siteMetadata.image_url =
-          siteMetadata.siteUrl + "/icons/icon-512x512.png";
         const siteMetadataModified = siteMetadata;
-        siteMetadataModified.feed_url = `${siteMetadata.siteUrl}/rss.xml`;
-        siteMetadataModified.image_url = `${siteMetadata.siteUrl}/icons/icon-512x512.png`;
-
-        return {
-          ...siteMetadataModified,
-          ...rest,
-        };
+        siteMetadataModified.feed_url = `${siteMetadata.siteUrl}/rss/index.xml`;
+        siteMetadataModified.image_url = `${siteMetadata.siteUrl}/icons/icon-144x144.png`;
+        return siteMetadataModified;
       },
-      feeds: [
-        {
+      feeds: siteMetadata.feeds.map((feedConfig) => {
+        return {
           serialize: ({ query: { site, allArticle } }) => {
             return allArticle.edges.map((edge) => {
               return {
@@ -147,26 +137,9 @@ module.exports = (options) => {
               };
             });
           },
-          query: `{
-            allArticle {
-              edges {
-                node {
-                  excerpt
-                  slug
-                  title
-                  date(formatString: "YYYY-MM-DD")
-                  tags
-                  categories
-                  language
-                }
-              }
-            }
-          }
-        `,
-          output: "/rss.xml",
-          title: `${siteMetadata.author.name} - ${siteMetadata.siteDescription}`,
-        },
-      ],
+          ...feedConfig,
+        };
+      }),
     },
   };
 
