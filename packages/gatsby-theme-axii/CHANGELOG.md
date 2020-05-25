@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.13.1...@eshlox/gatsby-theme-axii@0.14.0) (2020-05-25)
+
+
+### Features
+
+* **rss:** support for multiple feeds ([c782478](https://github.com/eshlox/gatsby-theme-axii/commit/c782478f784e43c83175af0edf25a3541d09aa52))
+
+
+
+
+
 ## [0.13.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.13.0...@eshlox/gatsby-theme-axii@0.13.1) (2020-05-23)
 
 
