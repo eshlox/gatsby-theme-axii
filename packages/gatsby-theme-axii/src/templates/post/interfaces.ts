@@ -23,7 +23,6 @@ export interface PostPageProps {
     site: {
       siteMetadata: {
         siteUrl: string;
-        siteTitle: string;
         siteDescription: string;
         author: {
           name: string;

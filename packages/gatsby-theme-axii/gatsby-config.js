@@ -108,7 +108,6 @@ module.exports = (options) => {
       query: `{
         site {
           siteMetadata {
-            title: siteTitle
             description: siteDescription
             siteUrl
             site_url: siteUrl
@@ -119,11 +118,15 @@ module.exports = (options) => {
         query: {
           site: { siteMetadata },
         },
+        ...rest
       }) => {
         const siteMetadataModified = siteMetadata;
         siteMetadataModified.feed_url = `${siteMetadata.siteUrl}/rss/index.xml`;
         siteMetadataModified.image_url = `${siteMetadata.siteUrl}/icons/icon-144x144.png`;
-        return siteMetadataModified;
+        return {
+          ...siteMetadataModified,
+          ...rest,
+        };
       },
       feeds: siteMetadata.feeds.map((feedConfig) => {
         return {

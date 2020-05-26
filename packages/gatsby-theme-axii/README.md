@@ -83,8 +83,6 @@ const options = {
   siteMetadata: {
     // The site URL
     siteUrl: `https://gatsby-theme-axii.netlify.app`,
-    // The index page title
-    siteTitle: `Homepage`,
     // The site description
     siteDescription: `Very simple blog theme.`,
     // Author data

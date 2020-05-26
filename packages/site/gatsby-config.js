@@ -4,7 +4,6 @@ const options = {
   contentPosts: "content/posts",
   siteMetadata: {
     siteUrl: `https://gatsby-theme-axii.netlify.app`,
-    siteTitle: `Homepage`,
     siteDescription: `Very simple blog theme.`,
     author: {
       nickname: `eshlox`,
