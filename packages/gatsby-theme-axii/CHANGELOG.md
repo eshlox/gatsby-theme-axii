@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.14.0...@eshlox/gatsby-theme-axii@0.14.1) (2020-05-26)
+
+
+### Bug Fixes
+
+* **rss:** use feed title instead of page title ([84b062c](https://github.com/eshlox/gatsby-theme-axii/commit/84b062c89c058f3c26f7a129bd3ddee0b1fcfe24))
+
+
+
+
+
 # [0.14.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.13.1...@eshlox/gatsby-theme-axii@0.14.0) (2020-05-25)
 
 

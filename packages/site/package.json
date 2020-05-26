@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "site",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -10,7 +10,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@eshlox/gatsby-theme-axii": "0.14.0",
+    "@eshlox/gatsby-theme-axii": "0.14.1",
     "gatsby": "^2.22.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
