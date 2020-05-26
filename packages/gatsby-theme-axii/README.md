@@ -1,4 +1,4 @@
-![AXII - A Gatsby blog theme](../site/static/og-default.png "AXII - A Gatsby blog theme")
+![AXII - A Gatsby blog theme](https://github.com/eshlox/gatsby-theme-axii/blob/master/packages/site/static/og-default.png "AXII - A Gatsby blog theme")
 
 # AXII - A Gatsby blog theme
 
