@@ -29,7 +29,7 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.54",
     "@material-ui/styles": "^4.10.0",
-    "@mdx-js/mdx": "^1.6.4",
+    "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.4",
     "algoliasearch": "^4.2.0",
     "chunk-text": "^1.0.5",
