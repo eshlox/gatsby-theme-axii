@@ -47,7 +47,7 @@
     "gatsby-plugin-mdx": "^1.2.12",
     "gatsby-plugin-next-seo": "^1.5.1",
     "gatsby-plugin-page-creator": "^2.3.7",
-    "gatsby-plugin-remove-trailing-slashes": "^2.3.3",
+    "gatsby-plugin-remove-trailing-slashes": "^2.3.4",
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.6.9",
