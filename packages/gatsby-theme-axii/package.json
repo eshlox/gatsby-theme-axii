@@ -52,7 +52,7 @@
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.6.10",
     "gatsby-plugin-twitter": "^2.3.3",
-    "gatsby-plugin-typescript": "^2.4.3",
+    "gatsby-plugin-typescript": "^2.4.4",
     "gatsby-remark-copy-linked-files": "^2.3.3",
     "gatsby-remark-embedder": "^2.1.1",
     "gatsby-remark-external-links": "^0.0.4",
