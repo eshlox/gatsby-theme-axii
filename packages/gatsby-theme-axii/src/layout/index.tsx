@@ -18,7 +18,7 @@ const query = graphql`
   {
     site {
       siteMetadata {
-        moentization {
+        monetization {
           paymentPointer
         }
       }
