@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.10.1...site@0.11.0) (2020-06-11)
+
+
+### Features
+
+* **monetization:** coil support ([7616942](https://github.com/eshlox/gatsby-theme-axii/commit/761694258e67a42c95699d6d861c9979113f1b3e))
+
+
+
+
+
 ## [0.10.1](https://github.com/eshlox/gatsby-theme-axii/compare/site@0.10.0...site@0.10.1) (2020-05-26)
 
 

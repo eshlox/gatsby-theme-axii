@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.14.1...@eshlox/gatsby-theme-axii@0.15.0) (2020-06-11)
+
+
+### Bug Fixes
+
+* **monetization:** fix typo in graphql query ([0059844](https://github.com/eshlox/gatsby-theme-axii/commit/00598444f0cfb6491d2c085646ffd160186c31f1))
+
+
+### Features
+
+* **monetization:** coil support ([7616942](https://github.com/eshlox/gatsby-theme-axii/commit/761694258e67a42c95699d6d861c9979113f1b3e))
+
+
+
+
+
 ## [0.14.1](https://github.com/eshlox/gatsby-theme-axii/compare/@eshlox/gatsby-theme-axii@0.14.0...@eshlox/gatsby-theme-axii@0.14.1) (2020-05-26)
 
 
