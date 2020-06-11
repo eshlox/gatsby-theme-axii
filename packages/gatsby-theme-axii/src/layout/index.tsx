@@ -4,17 +4,38 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { MDXProvider } from "@mdx-js/react";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MDXComponents from "../components/MDXComponents";
 import { darkTheme, lightTheme } from "../styles/theme";
+import LayoutQuery from "./interfaces";
 import useStyles from "./styles";
+
+const query = graphql`
+  {
+    site {
+      siteMetadata {
+        moentization {
+          coil
+        }
+      }
+    }
+  }
+`;
 
 const Layout: React.FC = ({ children }) => {
   const classes = useStyles();
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const {
+    site: {
+      siteMetadata: {
+        monetization: { coil },
+      },
+    },
+  }: LayoutQuery = useStaticQuery(query);
 
   const theme = React.useMemo(
     () => (prefersDarkMode ? darkTheme : lightTheme),
@@ -32,6 +53,7 @@ const Layout: React.FC = ({ children }) => {
           name="twitter:widgets:theme"
           content={prefersDarkMode ? "dark" : "light"}
         />
+        {coil && <meta name="monetization" content={coil} />}
       </Helmet>
       <CssBaseline />
       <Box className={classes.root}>

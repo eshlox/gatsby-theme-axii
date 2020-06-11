@@ -14,6 +14,9 @@ const options = {
       site: "gatsby-theme-axii.netlify.app",
       gender: "male",
     },
+    monetization: {
+      coil: "$ilp.uphold.com/gqw66KbrMRwA",
+    },
     social: {
       twitter: {
         handle: "@eshlox",

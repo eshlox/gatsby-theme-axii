@@ -10,6 +10,9 @@ export interface SiteMetaData {
     site: string;
     gender: string;
   };
+  monetization: {
+    coil: string;
+  };
   social: {
     twitter: {
       handle: string;

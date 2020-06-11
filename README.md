@@ -22,6 +22,7 @@
 - Sitemap
 - Sentry support
 - Twitter & Youtube embeds support
+- Web monetization via Coil
 
 ## Theme documentation
 

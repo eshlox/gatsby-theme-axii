@@ -22,6 +22,7 @@
 - Sitemap
 - Sentry support
 - Twitter & Youtube embeds support
+- Web monetization via Coil
 
 ## Example site - source code
 
@@ -95,6 +96,10 @@ const options = {
       email: `email@example.com`,
       site: `gatsby-theme-axii.netlify.app`,
       gender: "male",
+    },
+    // Monetization
+    monetization: {
+      coil: "PAYMENT-POINTER",
     },
     // Social accounts. Remove to disable.
     social: {
