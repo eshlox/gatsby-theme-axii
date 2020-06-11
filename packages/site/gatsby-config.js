@@ -15,7 +15,7 @@ const options = {
       gender: "male",
     },
     monetization: {
-      coil: "$ilp.uphold.com/gqw66KbrMRwA",
+      paymentPointer: "$ilp.uphold.com/gqw66KbrMRwA",
     },
     social: {
       twitter: {

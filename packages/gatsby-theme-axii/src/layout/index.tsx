@@ -19,7 +19,7 @@ const query = graphql`
     site {
       siteMetadata {
         moentization {
-          coil
+          paymentPointer
         }
       }
     }
@@ -32,7 +32,7 @@ const Layout: React.FC = ({ children }) => {
   const {
     site: {
       siteMetadata: {
-        monetization: { coil },
+        monetization: { paymentPointer },
       },
     },
   }: LayoutQuery = useStaticQuery(query);
@@ -53,7 +53,9 @@ const Layout: React.FC = ({ children }) => {
           name="twitter:widgets:theme"
           content={prefersDarkMode ? "dark" : "light"}
         />
-        {coil && <meta name="monetization" content={coil} />}
+        {paymentPointer && (
+          <meta name="monetization" content={paymentPointer} />
+        )}
       </Helmet>
       <CssBaseline />
       <Box className={classes.root}>

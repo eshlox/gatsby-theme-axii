@@ -22,7 +22,7 @@
 - Sitemap
 - Sentry support
 - Twitter & Youtube embeds support
-- Web monetization via Coil
+- Web monetization support
 
 ## Example site - source code
 
@@ -99,7 +99,7 @@ const options = {
     },
     // Monetization
     monetization: {
-      coil: "PAYMENT-POINTER",
+      paymentPointer: "PAYMENT-POINTER",
     },
     // Social accounts. Remove to disable.
     social: {

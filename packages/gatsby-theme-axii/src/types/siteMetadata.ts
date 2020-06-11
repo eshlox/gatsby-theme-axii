@@ -11,7 +11,7 @@ export interface SiteMetaData {
     gender: string;
   };
   monetization: {
-    coil: string;
+    paymentPointer: string;
   };
   social: {
     twitter: {
