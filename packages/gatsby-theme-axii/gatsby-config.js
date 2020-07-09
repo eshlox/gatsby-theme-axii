@@ -17,6 +17,7 @@ module.exports = (options) => {
       background_color: `#ffffff`,
       display: `standalone`,
       icon: `content/images/icon.png`,
+      legacy: false,
       name: siteMetadata.manifest.name,
       short_name: siteMetadata.manifest.short_name,
       start_url: `/`,
